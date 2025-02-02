@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+            overflow: hidden;
+            flex-direction: column;
+        }
+
+        .gallery-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        .main-image {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            aspect-ratio: 1/1;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+            background: white;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .main-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.5s ease;
+        }
+
+        .thumbnail-list {
+            display: flex;
+            gap: 10px;
+            padding: 10px;
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 800px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            background: white;
+            overflow-x: auto;
+            scrollbar-width: none; /* Hide scrollbar for Firefox */
+            scroll-behavior: smooth; /* Smooth scrolling */
+        }
+
+        .thumbnail-list::-webkit-scrollbar {
+            display: none; /* Hide scrollbar for Chrome, Safari, and Edge */
+        }
+
+        .thumbnail-list img {
+            width: 80px;
+            height: 80px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .thumbnail-list img:hover {
+            transform: scale(1.1);
+        }
+
+        .thumbnail-list img.active {
+            box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.5);
+        }
+
+        .dots {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ccc;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .dot:hover {
+            background-color: #666;
+        }
+
+        .active-dot {
+            background-color: #333;
+        }
+
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: #333;
+            font-size: 40px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .nav-button:hover {
+            color: #000;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .main-image {
+                max-width: 300px;
+            }
+
+            .thumbnail-list img {
+                width: 60px;
+                height: 60px;
+            }
+
+            .nav-button {
+                font-size: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-image {
+                max-width: 250px;
+            }
+
+            .thumbnail-list img {
+                width: 50px;
+                height: 50px;
+            }
+
+            .nav-button {
+                font-size: 25px;
+            }
+
+            .dots {
+                gap: 5px;
+            }
+
+            .dot {
+                width: 8px;
+                height: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery-container">
+        <div class="main-image">
+            <img id="mainImg" src="https://cdn.josetxu.com/img/gp-fisura-saqueadores.jpg" alt="Main Image">
+        </div>
+        <button class="nav-button prev" onclick="prevImage()">&#10094;</button>
+        <button class="nav-button next" onclick="nextImage()">&#10095;</button>
+        <div class="thumbnail-list">
+            <img src="https://cdn.josetxu.com/img/gp-fisura-saqueadores.jpg" alt="Thumbnail 1" onclick="changeImage(0)">
+            <img src="https://cdn.josetxu.com/img/gp-lucas-hueso.jpg" alt="Thumbnail 2" onclick="changeImage(1)">
+            <img src="https://cdn.josetxu.com/img/gp-blues-ojos-bonitos-tres-coronas.jpg" alt="Thumbnail 3" onclick="changeImage(2)">
+            <img src="https://cdn.josetxu.com/img/gp-perros-salvajes-gran-molondrio.jpg" alt="Thumbnail 4" onclick="changeImage(3)">
+            <img src="https://cdn.josetxu.com/img/gp-tonin-rocodromo.jpg" alt="Thumbnail 5" onclick="changeImage(4)">
+            <img src="https://cdn.josetxu.com/img/gp-clan-de-los-osos-pandemonium.jpg" alt="Thumbnail 6" onclick="changeImage(5)">
+            <img src="https://cdn.josetxu.com/img/gp-oscar-raul-hueco-hoces2.jpg" alt="Thumbnail 7" onclick="changeImage(6)">
+            <img src="https://cdn.josetxu.com/img/gp-me-pesa-hasta-el-aire-dehesilla.jpg" alt="Thumbnail 8" onclick="changeImage(7)">
+            <img src="https://cdn.josetxu.com/img/gp-diedro-mezquita.jpg" alt="Thumbnail 9" onclick="changeImage(8)">
+            <img src="https://cdn.josetxu.com/img/gp-biafra-hueso.jpg" alt="Thumbnail 10" onclick="changeImage(9)">
+        </div>
+        <div class="dots">
+            <span class="dot active-dot" onclick="changeImage(0)"></span>
+            <span class="dot" onclick="changeImage(1)"></span>
+            <span class="dot" onclick="changeImage(2)"></span>
+            <span class="dot" onclick="changeImage(3)"></span>
+            <span class="dot" onclick="changeImage(4)"></span>
+            <span class="dot" onclick="changeImage(5)"></span>
+            <span class="dot" onclick="changeImage(6)"></span>
+            <span class="dot" onclick="changeImage(7)"></span>
+            <span class="dot" onclick="changeImage(8)"></span>
+            <span class="dot" onclick="changeImage(9)"></span>
+        </div>
+    </div>
+
+    <script>
+        const images = [
+            "https://cdn.josetxu.com/img/gp-fisura-saqueadores.jpg",
+            "https://cdn.josetxu.com/img/gp-lucas-hueso.jpg",
+            "https://cdn.josetxu.com/img/gp-blues-ojos-bonitos-tres-coronas.jpg",
+            "https://cdn.josetxu.com/img/gp-perros-salvajes-gran-molondrio.jpg",
+            "https://cdn.josetxu.com/img/gp-tonin-rocodromo.jpg",
+            "https://cdn.josetxu.com/img/gp-clan-de-los-osos-pandemonium.jpg",
+            "https://cdn.josetxu.com/img/gp-oscar-raul-hueco-hoces2.jpg",
+            "https://cdn.josetxu.com/img/gp-me-pesa-hasta-el-aire-dehesilla.jpg",
+            "https://cdn.josetxu.com/img/gp-diedro-mezquita.jpg",
+            "https://cdn.josetxu.com/img/gp-biafra-hueso.jpg"
+        ];
+
+        let currentIndex = 0;
+
+        function changeImage(index) {
+            const mainImg = document.getElementById('mainImg');
+            const dots = document.querySelectorAll('.dot');
+            const thumbnails = document.querySelectorAll('.thumbnail-list img');
+            const thumbnailList = document.querySelector('.thumbnail-list');
+
+            // Fade out current image
+            mainImg.style.opacity = 0;
+
+            setTimeout(() => {
+                mainImg.src = images[index];
+                mainImg.style.opacity = 1; // Fade in new image
+                currentIndex = index;
+
+                // Update active dot
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle('active-dot', i === index);
+                });
+
+                // Update active thumbnail
+                thumbnails.forEach((thumb, i) => {
+                    thumb.classList.toggle('active', i === index);
+                });
+
+                // Scroll to the active thumbnail
+                const activeThumbnail = thumbnails[index];
+                const thumbnailListRect = thumbnailList.getBoundingClientRect();
+                const activeThumbnailRect = activeThumbnail.getBoundingClientRect();
+
+                if (activeThumbnailRect.left < thumbnailListRect.left) {
+                    // Scroll left
+                    thumbnailList.scrollBy({
+                        left: activeThumbnailRect.left - thumbnailListRect.left - 10,
+                        behavior: 'smooth'
+                    });
+                } else if (activeThumbnailRect.right > thumbnailListRect.right) {
+                    // Scroll right
+                    thumbnailList.scrollBy({
+                        left: activeThumbnailRect.right - thumbnailListRect.right + 10,
+                        behavior: 'smooth'
+                    });
+                }
+            }, 300); // Match transition duration
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            changeImage(currentIndex);
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            changeImage(currentIndex);
+        }
+    </script>
+</body>
+</html>
