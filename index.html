@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="it_home.css">
+    <link rel="icon" type="image/png" sizes="70x70" href="images/IT_BIRD_042804.png">
     <script src="it_home.js" defer></script>
-    <title>Document</title>
+    <title>Illanthoodhu</title>
 </head>
 
 <body>
@@ -22,74 +23,98 @@
         <h2 class="name1">இளந்துதூ</h2>
         <ul class="nav-links">
             <li><a href="#home">Home</a></li>
-            <li><a href="#history">History</a></li>
-            <li><a href="#book-show">Book Show</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#one">Curent Year</a></li>
+            <li><a href="#two">History</a></li>
+            <li><a href="#three">Library</a></li>
+            <li><a href="#four">Contact</a></li>
         </ul>
     </div>
 
     <div class="navbar">
         <div class="nav-elements">
-            <h1 class="name2">இளந்துதூ</h1>
+            <h1 class="name2">இளந்தூது</h1>
             <a href="#menu" id="toggle" onclick="display()"> <span></span></a>
         </div>
 
         <div id="menu">
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#history">History</a></li>
-                <li><a href="#book-show">Book Show</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#one">Curent Year</a></li>
+                <li><a href="#two">History</a></li>
+                <li><a href="#three">Library</a></li>
+                <li><a href="#four">Contact</a></li>
             </ul>
         </div>
     </div>
-
     <!-----------home section----------->
     <main id="home">
-        <div class="parallax-wrapper">
-            <div class="parallax-layer layer1"></div>
-            <div class="parallax-layer layer2"></div>
-            <div class="parallax-layer layer3"></div>
-            <div class="logo">
-                <img class="logo-item-1" src="images/IT_BIRD_042804.png" alt="bird">
-                <img class="logo-item-2" src="images/IT_LOGO_042810.png" alt="text">
-            </div>
+        <video autoplay loop muted playsinline id="bg-video">
+            <!-- Provide multiple video formats for better compatibility -->
+            <source src="avc-video.mp4" type="video/mp4">
+            <source src="avc-video.mp4" type="video/webm">
+            <source src="avc-video.mp4" type="video/ogg">
+        </video>
+
+        <div class="logo">
+            <img class="logo-item-1" src="images/IT_BIRD_042804.png" alt="bird">
+            <img class="logo-item-2" src="images/IT_LOGO_042810.png" alt="text">
         </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const video = document.getElementById("bg-video");
+
+                // Check if the video is playing
+                video.addEventListener("error", function () {
+                    console.error("Video failed to load. Showing fallback image.");
+                    const fallbackImage = document.createElement("img");
+                    fallbackImage.src = "images/fallback-image.jpg"; // Path to fallback image
+                    fallbackImage.alt = "Fallback Image";
+                    fallbackImage.style.width = "100%";
+                    fallbackImage.style.height = "100%";
+                    fallbackImage.style.objectFit = "cover";
+                    video.parentNode.replaceChild(fallbackImage, video);
+                });
+            });
+        </script>
     </main>
-    <script>/*
+
+    <!-- 
+    <script>
     window.addEventListener('scroll', function () {
-        requestAnimationFrame(updateOnScroll);
-    });
+    requestAnimationFrame(updateOnScroll);
+});
 
-    function updateOnScroll() {
-        let scrollPosition = window.scrollY;
+function updateOnScroll() {
+    let scrollPosition = window.scrollY;
 
-        // For layer1, it stays fixed
-        document.querySelector('.layer1').style.transform = 'translateY(0)';
+    // Parallax Effect
+    document.querySelector('.layer1').style.transform = 'translateY(0)';
+    
+    let scaleValue = 1 + (scrollPosition * 0.002);
+    document.querySelector('.layer2').style.transform = `scale(${scaleValue})`;
+    document.querySelector('.layer3').style.transform = `scale(${scaleValue})`;
+    document.querySelector('.layer4').style.transform = `scale(${scaleValue})`; // New Layer
 
-        // For layer2 & layer3, they zoom as you scroll
-        let scaleValue = 1 + (scrollPosition * 0.002);  // Control zoom intensity here
-        document.querySelector('.layer2').style.transform = `scale(${scaleValue})`;
-        document.querySelector('.layer3').style.transform = `scale(${scaleValue})`;
+    /*// Logo Effects
+    let logoScale = 1 + (scrollPosition * 0.001);
+    let logoOpacity = Math.max(0, 1 - (scrollPosition * 0.003));
 
-        // For the logo, zoom and fade effect
-        let logoScale = 1 + (scrollPosition * 0.001);  // Control zoom intensity for logo
-        let logoOpacity = 1 - (scrollPosition * 0.003);  // Control fade effect for logo
+    let logo = document.querySelector('.logo');
+    logo.style.transform = `translate(-50%, -50%) scale(${logoScale})`;
+    logo.style.opacity = logoOpacity;*/
+}
 
-        document.querySelector('.logo').style.transform = `translate(-50%, -50%) scale(${logoScale})`;
-        document.querySelector('.logo').style.opacity = logoOpacity;
-    }*/
-    </script>
+    </script> -->
 
     <!-----------section one----------->
-    <section class="one">
+    <section id="one">
         <div class="heading">
             <p>the current year</p>
         </div>
         <br>
         <div class="gallery-container">
             <div class="main-image">
-                <img id="mainImg" src="https://cdn.josetxu.com/img/gp-fisura-saqueadores.jpg" alt="Main Image">
+                <img id="mainImg" src="images/1.jpg" alt="Main Image">
             </div>
             <button class="nav-button prev" onclick="prevImage()">&#10094;</button>
             <button class="nav-button next" onclick="nextImage()">&#10095;</button>
@@ -138,7 +163,6 @@
                             d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-167l80 80c9.4 9.4 24.6 9.4 33.9 0l80-80c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-39 39V184c0-13.3-10.7-24-24-24s-24 10.7-24 24V318.1l-39-39c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9z" />
                     </svg>
                 </div>
-                <div class="text">Download</div>
             </button>
 
         </div>
@@ -184,7 +208,7 @@
     <br><br><br>
 
     <!-----------section two(history)----------->
-    <section class="two">
+    <section id="two">
 
         <div class="heading">
             <p>History</p>
@@ -267,7 +291,7 @@
     <br><br><br>
 
     <!-----------section three(library)----------->
-    <section class="three">
+    <section id="three">
         <div id="book" data-aos="fade-up" data-aos-delay="100">
             <div class="heading">
                 <p>Library</p>
@@ -361,7 +385,7 @@
     <br><br><br>
 
     <!-----------section four(video)----------->
-    <section class="four">
+    <section id="four">
         <div class="heading">
             <p>Video</p>
         </div>
@@ -389,27 +413,35 @@
         </div>
         <div class="logos" data-aos="fade-up">
 
-            <a href="" target="_blank" tabindex="0" aria-label="instagram"><svg viewBox="0 0 448 512"
-                    class="SocialHandle">
+            <a href="https://www.instagram.com/ilanthoodhu_student_magazine?igsh=dmV3Z2FmZ3FjZ2hl" target="_blank"
+                tabindex="0" aria-label="instagram"><svg viewBox="0 0 448 512" class="SocialHandle">
                     <path
                         d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
                 </svg>
             </a>
 
 
-            <a href="mailto:" target="_blank" aria-label="My G mail"><svg id="GmailLogo" viewBox="0 0 512 512">
+            <a href="mailto:illanthoodhu32@gmail.con" target="_blank" aria-label="My G mail"><svg id="GmailLogo"
+                    viewBox="0 0 512 512">
                     <path
                         d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />
                 </svg>
             </a>
 
-            <a href="" target="_blank" tabindex="0" aria-label="youtube">
+            <a href="https://youtube.com/channel/UCSWVu032fMEDwXNavNRhiVw?si=cUo7jaFc-EaE-D_8" target="_blank"
+                tabindex="0" aria-label="youtube">
                 <svg viewBox="0 0 576 512" class="SocialHandle" width="40" height="40">
                     <path
                         d="M549.655 124.083c-6.281-23.652-24.831-42.202-48.483-48.483C456.014 64 288 64 288 64S119.986 64 74.828 75.6c-23.652 6.281-42.202 24.831-48.483 48.483C16 169.242 16 256 16 256s0 86.758 10.345 131.917c6.281 23.652 24.831 42.202 48.483 48.483C119.986 448 288 448 288 448s168.014 0 213.172-11.6c23.652-6.281 42.202-24.831 48.483-48.483C560 342.758 560 256 560 256s0-86.758-10.345-131.917zM232 336V176l144 80-144 80z" />
                 </svg>
             </a>
 
+            <a href="https://www.google.com/maps?q=4M3R+4M2,+Mayiladuthurai+-+Akkur+Road,+Mannampandal,+Nagapattinam+District,+Mayiladuthurai,+Tamil+Nadu+609305" target="_blank" tabindex="0" aria-label="My location">
+                <svg viewBox="0 0 384 512" class="SocialHandle" width="20" height="20">
+                    <path
+                        d="M192 0C86 0 0 86 0 192c0 87.3 128 271.5 176.5 340.2 8.5 11.6 26.5 11.6 35 0C256 463.5 384 279.3 384 192 384 86 298 0 192 0zm0 272a80 80 0 1 1 0-160 80 80 0 1 1 0 160z" />
+                </svg>
+            </a>
 
         </div>
     </section>

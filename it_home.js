@@ -160,3 +160,9 @@ document.querySelector(".book-prev").addEventListener("click", () => {
 });
 
 //home scroll
+const video = document.getElementById('bg-video');
+
+video.addEventListener('error', () => {
+    console.error("Video failed to load, switching to static background.");
+    document.querySelector('#home').classList.add('fallback');
+});
