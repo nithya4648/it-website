@@ -54,10 +54,10 @@
             <source src="avc-video.mp4" type="video/webm">
             <source src="avc-video.mp4" type="video/ogg">
         </video>
-
+        <div id="video-overlay"></div>
         <div class="logo">
-            <img class="logo-item-1" src="images/IT_BIRD_042804.png" alt="bird">
-            <img class="logo-item-2" src="images/IT_LOGO_042810.png" alt="text">
+            <img loading="lazy" class="logo-item-1" src="images/IT_BIRD_042804.png" alt="bird">
+            <img loading="lazy" class="logo-item-2" src="images/IT_LOGO_042810.png" alt="text">
         </div>
         <script>
             document.addEventListener("DOMContentLoaded", function () {
@@ -78,33 +78,7 @@
         </script>
     </main>
 
-    <!-- 
-    <script>
-    window.addEventListener('scroll', function () {
-    requestAnimationFrame(updateOnScroll);
-});
-
-function updateOnScroll() {
-    let scrollPosition = window.scrollY;
-
-    // Parallax Effect
-    document.querySelector('.layer1').style.transform = 'translateY(0)';
-    
-    let scaleValue = 1 + (scrollPosition * 0.002);
-    document.querySelector('.layer2').style.transform = `scale(${scaleValue})`;
-    document.querySelector('.layer3').style.transform = `scale(${scaleValue})`;
-    document.querySelector('.layer4').style.transform = `scale(${scaleValue})`; // New Layer
-
-    /*// Logo Effects
-    let logoScale = 1 + (scrollPosition * 0.001);
-    let logoOpacity = Math.max(0, 1 - (scrollPosition * 0.003));
-
-    let logo = document.querySelector('.logo');
-    logo.style.transform = `translate(-50%, -50%) scale(${logoScale})`;
-    logo.style.opacity = logoOpacity;*/
-}
-
-    </script> -->
+    <br><br><br>
 
     <!-----------section one----------->
     <section id="one">
@@ -114,33 +88,31 @@ function updateOnScroll() {
         <br>
         <div class="gallery-container">
             <div class="main-image">
-                <img id="mainImg" src="images/1.jpg" alt="Main Image">
+                <img loading="lazy" id="mainImg" src="current-pic/main-pic.jpg" alt="Main Image">
             </div>
             <button class="nav-button prev" onclick="prevImage()">&#10094;</button>
             <button class="nav-button next" onclick="nextImage()">&#10095;</button>
             <div class="thumbnail-list">
-                <img src="images/1.jpg" alt="Thumbnail 1" onclick="changeImage(0)">
-                <img src="images/1.jpg" alt="Thumbnail 2" onclick="changeImage(1)">
-                <img src="images/1.jpg" alt="Thumbnail 3" onclick="changeImage(2)">
-                <img src="images/1.jpg" alt="Thumbnail 4" onclick="changeImage(3)">
-                <img src="images/1.jpg" alt="Thumbnail 5" onclick="changeImage(4)">
-                <img src="images/1.jpg" alt="Thumbnail 6" onclick="changeImage(5)">
-                <img src="images/1.jpg" alt="Thumbnail 7" onclick="changeImage(6)">
-                <img src="images/1.jpg" alt="Thumbnail 8" onclick="changeImage(7)">
-                <img src="images/1.jpg" alt="Thumbnail 9" onclick="changeImage(8)">
-                <img src="images/1.jpg" alt="Thumbnail 10" onclick="changeImage(9)">
+                <img loading="lazy" src="current-pic/1.jpg" alt="Thumbnail 1" onclick="changeImage(0)">
+                <img loading="lazy" src="current-pic/2.jpg" alt="Thumbnail 2" onclick="changeImage(1)">
+                <img loading="lazy" src="current-pic/4.jpg" alt="Thumbnail 4" onclick="changeImage(3)">
+                <img loading="lazy" src="current-pic/5.jpg" alt="Thumbnail 5" onclick="changeImage(4)">
+                <img loading="lazy" src="current-pic/6.jpg" alt="Thumbnail 6" onclick="changeImage(5)">
+                <img loading="lazy" src="current-pic/7.jpg" alt="Thumbnail 7" onclick="changeImage(6)">
+                <img loading="lazy" src="current-pic/8.jpg" alt="Thumbnail 8" onclick="changeImage(7)">
+                <img loading="lazy" src="current-pic/9.jpg" alt="Thumbnail 9" onclick="changeImage(8)">
+                <img loading="lazy" src="current-pic/main-pic.jpg" alt="Thumbnail 9" onclick="changeImage(9)">
             </div>
+
             <div class="dots">
                 <span class="dot active-dot" onclick="changeImage(0)"></span>
                 <span class="dot" onclick="changeImage(1)"></span>
-                <span class="dot" onclick="changeImage(2)"></span>
                 <span class="dot" onclick="changeImage(3)"></span>
                 <span class="dot" onclick="changeImage(4)"></span>
                 <span class="dot" onclick="changeImage(5)"></span>
                 <span class="dot" onclick="changeImage(6)"></span>
                 <span class="dot" onclick="changeImage(7)"></span>
                 <span class="dot" onclick="changeImage(8)"></span>
-                <span class="dot" onclick="changeImage(9)"></span>
             </div>
         </div>
 
@@ -149,22 +121,23 @@ function updateOnScroll() {
         <!--current year editorial board-->
         <div class="editorial-board">
             <div class="sub-heading">
-                <p>Editorial-board</p>
+                <p>36th Editorial Board</p>
             </div>
             <br>
-            <div class="editorial-board-pdf">
-                <img src="images/editorial-board-pic.jpg" alt="">
-            </div>
+            <p class="ed-editor">
+                <b>Co-ordinator: </b>"Sir"
+                <br>
+                <b>Editor: </b>"Karthi"
+            </p>
             <br>
-            <button class="resume-btn" id="resume-btn" onclick="openURL()">
-                <div class="sign">
-                    <svg viewBox="0 0 640 512">
-                        <path
-                            d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-167l80 80c9.4 9.4 24.6 9.4 33.9 0l80-80c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-39 39V184c0-13.3-10.7-24-24-24s-24 10.7-24 24V318.1l-39-39c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9z" />
-                    </svg>
-                </div>
-            </button>
-
+            <div class="ed-element">
+                <p class="ed-para">
+                    The full editorial board
+                </p>
+                <button class="resume-btn" id="resume-btn" onclick="openURL()">
+                    view
+                </button>
+            </div>
         </div>
         <script>
             function openURL() {
@@ -178,25 +151,14 @@ function updateOnScroll() {
         <!--current year book-->
         <div id="c-book" data-aos="fade-up" data-aos-delay="100">
             <div class="sub-heading">
-                <p>36th books</p>
+                <p>36th year books</p>
             </div>
             <br>
             <div class="cb-item">
                 <div class="cb-wrapper" data-aos="fade-up">
-                    <img src="images/2.jpg" alt="Book 1">
-                    <p>Lorem ipsum dolor sit amet.</p>
+                    <img loading="lazy" src="book-wrapper/2024 sept.jpg" alt="Book 1">
                     <button class="order-btn">
-                        <a href="" target="_blank" aria-label="illanthoodhu G mail">
-                            order now
-                        </a>
-                    </button>
-                </div>
-
-                <div class="cb-wrapper" data-aos="fade-up">
-                    <img src="images/1.jpg" alt="Book 2">
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <button class="order-btn">
-                        <a href="" target="_blank" aria-label="illanthoodhu G mail">
+                        <a href="mailto:illanthoodhu32@gmail.con" target="_blank" aria-label="illanthoodhu G mail">
                             order now
                         </a>
                     </button>
@@ -205,181 +167,374 @@ function updateOnScroll() {
         </div>
 
     </section>
-    <br><br><br>
+
+    <!-----------Google-Style Ad----------->
+    <div id="googleAd" class="google-ad">
+
+        <div class="ad-header">
+            <span class="sponsored">Ad · Sponsored</span>
+            <button id="closeAd" class="close-btn">&times;</button>
+        </div>
+
+        <div class="ad-content">
+            <video id="adVideo" autoplay muted loop playsinline>
+                <source src="avc-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video><br>
+            <div class="ad-name">
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+        </div>
+
+        <div class="ad-footer">
+            <a href="#" class="ad-link">Learn More</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("closeAd").addEventListener("click", function () {
+            document.getElementById("googleAd").style.display = "none";
+        });
+    </script>
+
 
     <!-----------section two(history)----------->
     <section id="two">
-
         <div class="heading">
             <p>History</p>
         </div>
+        <br>
+        <!-- First set of visible sections -->
+        <div class="history-sections" id="visible-sections">
 
-        <div class="history">
-            <div id="mainContent">
-                <div class="history-text">
-                    <p>
-                    <p class="sub-heading">The Journey of Our Organization</p>
-                    <br><br>
-                    <p class="sub-heading">The Inception (1987)</p>
-                    <br>
-                    In the second academic term of 1987, a groundbreaking initiative titled "A Scientific Introduction"
-                    was launched. Spearheaded by renowned educators such as Mr. V. Sengalvarayan, a prominent professor
-                    of the time, this initiative was born out of the necessity for structured, research-driven learning
-                    that could impact students’ futures. It marked the beginning of what would become a significant
-                    chapter in the organization’s history.
+            <article class="introduction">
+                <h2 class="fade-in">Introduction: The Spark of Ilandhoothu</h2>
+                <p class="fade-in">In 1987, during the second-year college curriculum, a course titled "Introduction to
+                    Journalism" became the turning point in the life of Radha Krishnan. It was through this course that
+                    he was first introduced to the world of journalism, sparking a passion that would change the course
+                    of his academic life. The course was taught by Professor K. Sengaiyan, the head of the Tamil
+                    Department, whose teaching style deeply inspired Radha Krishnan. Under the guidance of Professor
+                    Sengaiyan, Radha Krishnan was encouraged to further pursue journalism.</p>
 
-                    <p class="sub-heading">Building the Foundation</p>
-                    <br>
-                    The initiative quickly gained traction, bringing together a dedicated group of scholars who shared a
-                    common goal: to create a comprehensive and impactful learning system. Emphasis was placed on
-                    practical education, interdisciplinary collaboration, and fostering a culture of research and
-                    innovation. These early years were marked by discussions, deliberations, and the careful shaping of
-                    an educational model that would later become the hallmark of our institution.
-
-                    Mr. Sengalvarayan, with his profound understanding of educational needs and a deep commitment to
-                    academic rigor, inspired the team to push boundaries and think beyond conventional teaching methods.
-                    His leadership proved to be pivotal in nurturing the vision and transforming it into a sustainable
-                    educational platform.
-
-                    <p class="sub-heading">Expansion and Recognition</p>
-                    <br>
-                    As the years passed, the initiative expanded into a fully-fledged organization. With growing
-                    recognition for its contributions to education, new ideas and methodologies were introduced,
-                    allowing the organization to diversify and reach broader academic and professional domains. The
-                    focus remained steadfast on providing quality education and promoting research-driven excellence.
-                    <br>
-                    The organization’s ability to adapt to changing times and embrace innovative technologies played a
-                    crucial role in its rapid expansion. Over time, it gained widespread respect and recognition from
-                    both academic and professional communities for its commitment to educational reform.
-
-                    <p class="sub-heading">Embracing the Future</p>
-                    <br>
-                    In recent years, the organization has embraced digital platforms, ensuring its relevance in the
-                    modern age of education. The integration of collaborative learning methods and a greater focus on
-                    technology has enabled the organization to maintain its position at the forefront of educational
-                    innovation.
-                    <br>
-                    Today, our organization stands as a testament to the vision and dedication of its founders. With its
-                    unwavering commitment to growth, knowledge, and excellence, it continues to shape the minds of
-                    future generations, offering them the tools and skills necessary to thrive in an ever-evolving
-                    world.
-                    </p>
-
-                    <!-- Additional hidden text 
-                    <span id="hiddentext" style="display: none;">
-                        <p class="sub-heading">two</p>
-
-                    </span>
-                    </p>
-                    <button id="readMoreButton" onclick="read_more_history()">Read More</button>
+                <div class="founder-image">
+                    <img loading="lazy" src="images/founder-of-it.jpg" alt="founder of illanthoodhu">
+                    <p>The Founder of Illanthoodhu <br> <b>"Mr.Radha Krishnan"</b></p>
                 </div>
-            </div>
+            </article>
 
-            <div id="fullView">
-                <button id="backButton" onclick="close_history()">Back</button>
-                <div class="full-content">
-                    <p>
-                    
+            <article class="beginning">
+                <h2 class="fade-in">A New Beginning: Launching the Journal</h2>
+                <p class="fade-in">Radha Krishnan, feeling the need to create a space for student expression, shared his
+                    idea with Professor Venkatasalam, the head of the Business Studies Department. He received further
+                    encouragement from him. The initial steps towards launching a student-run journal began, and the
+                    project was named "Amritharajagam," under a pen name. Radha Krishnan was motivated to continue
+                    learning about journalism and eventually decided that the journal should be a long-term project.</p>
+
+                <div class="image">
+                    <img loading="lazy" src="old-pics/one.jpg" alt="Students working together">
                 </div>
-            </div>
-            -->
+            </article>
+        </div>
+
+        <!-- Hidden sections-->
+        <div class="history-sections hidden" id="hidden-sections-1">
+            <article class="growth">
+                <h2 class="fade-in">The Growth of the Journal: A Student-Centric Publication</h2>
+                <p class="fade-in">With the help of Professor Sengaiyan, Radha Krishnan approached the principal of the
+                    college, Dr. R. Balasubramanian, seeking approval to start the journal. The principal agreed,
+                    provided that the journal did not reflect negatively on the professors or the college. Radha
+                    Krishnan was asked to document his plans, and he eagerly set to work, ensuring that the journal
+                    would showcase the writing talents of the students.</p>
+
+                <div class="image">
+                    <img loading="lazy" src="old-pics/two.jpg" alt="Students working together">
                 </div>
+            </article>
+
+            <article class="funding">
+                <h2 class="fade-in">Funding and Distribution: Managing the First Print Run</h2>
+                <p class="fade-in">The first edition of Ilandhoothu was released during the college's annual festival,
+                    marking the official debut of the journal. The layout, color scheme, and publication details were
+                    carefully considered, including the use of yellow in the design. The magazine was printed and sold,
+                    with proceeds used to fund the college’s annual events.</p>
+
+                <div class="image">
+                    <img loading="lazy" src="images/printing.jpg" alt="Printing of the first edition">
+                </div>
+            </article>
+        </div>
+
+        <div class="history-sections hidden" id="hidden-sections-2">
+            <article class="leadership">
+                <h2 class="fade-in">Leadership Transition: Empowering the Next Generation</h2>
+                <p class="fade-in">As Radha Krishnan looked to the future, he recognized the importance of a smooth
+                    leadership transition. He mentored Aruna Ramesh, who took over as the editor, preparing her for the
+                    challenges of running the journal. Even though Aruna had no prior knowledge of journalism, Radha
+                    Krishnan's guidance helped her develop the necessary skills.</p>
+
+                <div class="image">
+                    <img loading="lazy" src="images/mentorship.jpg" alt="Radha Krishnan mentoring Aruna Ramesh">
+                </div>
+            </article>
+
+            <article class="conclusion">
+                <h2 class="fade-in">Conclusion: A Legacy of Student Expression</h2>
+                <p class="fade-in">The journey of Ilandhoothu is a testament to the power of student initiative,
+                    leadership, and expression. What began as a small project in 1987 has grown into a platform that
+                    continues to give students a voice in their academic community, encouraging creativity and fostering
+                    a sense of collaboration.</p>
+
+                <div class="image">
+                    <img loading="lazy" src="images/group-photo.jpg" alt="Group photo of students and faculty">
+                </div>
+            </article>
+        </div>
+
+        <!-- Buttons to toggle sections -->
+        <button class="button" id="read-more-btn-1" onclick="toggleSections('1')">Read More</button>
+        <button class="button" id="read-more-btn-2" onclick="toggleSections('2')" style="display:none;">Read
+            More</button>
+        <button class="button" id="show-less-btn" onclick="toggleSections('less')" style="display:none;">Show
+            Less</button>
 
     </section>
-
 
     <br><br><br>
 
     <!-----------section three(library)----------->
     <section id="three">
-        <div id="book" data-aos="fade-up" data-aos-delay="100">
+        <div id="old-book" data-aos="fade-up" data-aos-delay="100">
+
             <div class="heading">
-                <p>Library</p>
+                <p>library</p>
             </div>
+            <br>
+            <div class="old-book-div">
+                <p class="ob-contant">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam provident id sunt veniam possimus
+                    tempora illo quos laborum esse fuga?
+                </p>
+                <br>
+                <div class="sub-heading">
+                    <p>old editorial board</p>
+                </div>
+                <br>
+                <div class="ed-element">
+                    <p class="ed-para">
+                        editorial board
+                    </p>
 
-            <div class="b-item">
-
-                <div class="b-wrapper" data-aos="fade-up">
-                    <img src="images/2.jpg" alt="Book 1">
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <button class="order-btn">
-                        <a href="" target="_blank" aria-label="illanthoodhu G mail">
-                            view now
-                        </a>
+                    <button class="resume-btn" id="resume-btn" onclick="openURL()">
+                        view
                     </button>
                 </div>
-
-                <div class="b-wrapper" data-aos="fade-up">
-                    <img src="images/1.jpg" alt="Book 2">
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <button class="order-btn">
-                        <a href="" target="_blank" aria-label="illanthoodhu G mail">
-                            view now
-                        </a>
-                    </button>
-                </div>
-
-                <div class="b-wrapper" data-aos="fade-up">
-                    <img src="images/2.jpg" alt="Book 1">
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <button class="order-btn">
-                        <a href="" target="_blank" aria-label="illanthoodhu G mail">
-                            view now
-                        </a>
-                    </button>
-                </div>
-
-                <div class="b-wrapper" data-aos="fade-up">
-                    <img src="images/1.jpg" alt="Book 2">
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <button class="order-btn">
-                        <a href="" target="_blank" aria-label="illanthoodhu G mail">
-                            view now
-                        </a>
-                    </button>
-                </div>
-
-                <div class="b-wrapper" data-aos="fade-up">
-                    <img src="images/2.jpg" alt="Book 1">
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <button class="order-btn">
-                        <a href="" target="_blank" aria-label="illanthoodhu G mail">
-                            view now
-                        </a>
-                    </button>
-                </div>
-
-                <div class="b-wrapper" data-aos="fade-up">
-                    <img src="images/1.jpg" alt="Book 2">
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <button class="order-btn">
-                        <a href="" target="_blank" aria-label="illanthoodhu G mail">
-                            view now
-                        </a>
-                    </button>
-                </div>
-
-                <div class="b-wrapper" data-aos="fade-up">
-                    <img src="images/2.jpg" alt="Book 1">
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <button class="order-btn">
-                        <a href="" target="_blank" aria-label="illanthoodhu G mail">
-                            view now
-                        </a>
-                    </button>
-                </div>
-
-                <div class="b-wrapper" data-aos="fade-up">
-                    <img src="images/1.jpg" alt="Book 2">
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <button class="order-btn">
-                        <a href="" target="_blank" aria-label="illanthoodhu G mail">
-                            view now
-                        </a>
-                    </button>
-                </div>
-
+                <script>
+                    function openURL() {
+                        var url = "all-editorial-board.pdf";
+                        window.open(url, "_blank");
+                    }
+                </script>
             </div>
+            <br>
+            <p class="ob-contant">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+            <br>
+            <button id="viewLibraryBtn" class="view-library-btn">View Library</button>
+        </div>
+
+        <!-- Hidden Full-Screen Library Page -->
+        <div id="libraryPage">
+
+            <button id="backBtn" class="back-btn">&#8592;</button>
+            <br><br><br>
+
+            <div class="library-content">
+                <div class="heading">
+                    <p>library</p>
+                </div>
+
+                <div class="b-item">
+                    <!--1999-special book-->
+                    <div class="b-wrapper" loading="lazy" data-aos="fade-up">
+                        <img loading="lazy" src="book-wrapper/1999 sepecial book.jpg" alt="Book 1">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <button class="order-btn">
+                            <a href="books/1999-10th_Anniversary-Special_Book.pdf" target="_blank"
+                                aria-label="illanthoodhu G mail">
+                                view
+                            </a>
+                        </button>
+                    </div>
+
+                    <!--2001 sept book-->
+                    <div class="b-wrapper" loading="lazy" data-aos="fade-up">
+                        <img loading="lazy" src="book-wrapper/2001 sept.jpg" alt="Book 2">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <button class="order-btn">
+                            <a href="books/2001-Sep.pdf" target="_blank" aria-label="illanthoodhu G mail">
+                                view
+                            </a>
+                        </button>
+                    </div>
+
+                    <!--2002 march book-->
+                    <div class="b-wrapper" loading="lazy" data-aos="fade-up">
+                        <img loading="lazy" src="book-wrapper/2002 march.jpg" alt="Book 2">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <button class="order-btn">
+                            <a href="books/2002-March.pdf" target="_blank" aria-label="illanthoodhu G mail">
+                                view
+                            </a>
+                        </button>
+                    </div>
+
+                    <!--2002 sept book-->
+                    <div class="b-wrapper" loading="lazy" data-aos="fade-up">
+                        <img loading="lazy" src="book-wrapper/2002 sept.jpg" alt="Book 2">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <button class="order-btn">
+                            <a href="books/2002-Sep.pdf" target="_blank" aria-label="illanthoodhu G mail">
+                                view
+                            </a>
+                        </button>
+                    </div>
+
+                    <!--2003 march book-->
+                    <div class="b-wrapper" loading="lazy" data-aos="fade-up">
+                        <img loading="lazy" src="book-wrapper/2003 march.jpg" alt="Book 2">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <button class="order-btn">
+                            <a href="books/2003-March.pdf" target="_blank" aria-label="illanthoodhu G mail">
+                                view
+                            </a>
+                        </button>
+                    </div>
+
+                    <!--2003 sept book-->
+                    <div class="b-wrapper" loading="lazy" data-aos="fade-up">
+                        <img loading="lazy" src="book-wrapper/2003 sept.jpg" alt="Book 2">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <button class="order-btn">
+                            <a href="books/2003-Sep.pdf" target="_blank" aria-label="illanthoodhu G mail">
+                                view
+                            </a>
+                        </button>
+                    </div>
+
+                    <!--2004 march book-->
+                    <div class="b-wrapper" loading="lazy" data-aos="fade-up">
+                        <img loading="lazy" src="book-wrapper/2004 march.jpg" alt="Book 2">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <button class="order-btn">
+                            <a href="books/2004-March.pdf" target="_blank" aria-label="illanthoodhu G mail">
+                                view
+                            </a>
+                        </button>
+                    </div>
+
+                    <!--2004 sept book-->
+                    <div class="b-wrapper" loading="lazy" data-aos="fade-up">
+                        <img loading="lazy" src="book-wrapper/2004 sept.jpg" alt="Book 2">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <button class="order-btn">
+                            <a href="books/2004-Sep.pdf" target="_blank" aria-label="illanthoodhu G mail">
+                                view
+                            </a>
+                        </button>
+                    </div>
+
+                    <!--2005 sept book-->
+                    <div class="b-wrapper" loading="lazy" data-aos="fade-up">
+                        <img loading="lazy" src="book-wrapper/2005 sept.jpg" alt="Book 2">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <button class="order-btn">
+                            <a href="books/2005-Sep.pdf" target="_blank" aria-label="illanthoodhu G mail">
+                                view
+                            </a>
+                        </button>
+                    </div>
+
+                    <!--2006 sept book-->
+                    <div class="b-wrapper" loading="lazy" data-aos="fade-up">
+                        <img loading="lazy" src="book-wrapper/2006 sept.jpg" alt="Book 2">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <button class="order-btn">
+                            <a href="books/2006-Sep.pdf" target="_blank" aria-label="illanthoodhu G mail">
+                                view
+                            </a>
+                        </button>
+                    </div>
+
+                    <!--2008 20th aniversery sepcial book
+                    <div class="b-wrapper" loading="lazy" data-aos="fade-up">
+                        <img loading="lazy" src="book-wrapper/" alt="Book 2">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <button class="order-btn">
+                            <a href="" target="_blank" aria-label="illanthoodhu G mail">
+                                view
+                            </a>
+                        </button>
+                    </div>-->
+
+                    <!--2008 sept book-->
+                    <div class="b-wrapper" loading="lazy" data-aos="fade-up">
+                        <img loading="lazy" src="book-wrapper/2008 sept.jpg" alt="Book 2">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <button class="order-btn">
+                            <a href="books/2008-Sep.pdf" target="_blank" aria-label="illanthoodhu G mail">
+                                view
+                            </a>
+                        </button>
+                    </div>
+
+                    <!--2009 march book-->
+                    <div class="b-wrapper" loading="lazy" data-aos="fade-up">
+                        <img loading="lazy" src="book-wrapper/2009 march.jpg" alt="Book 2">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <button class="order-btn">
+                            <a href="books/2009 march.pdf" target="_blank" aria-label="illanthoodhu G mail">
+                                view
+                            </a>
+                        </button>
+                    </div>
+
+                    <!--2009 sept book-->
+                    <div class="b-wrapper" loading="lazy" data-aos="fade-up">
+                        <img loading="lazy" src="book-wrapper/2009 sept.jpg" alt="Book 2">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <button class="order-btn">
+                            <a href="books/2009 setp.pdf" target="_blank" aria-label="illanthoodhu G mail">
+                                view
+                            </a>
+                        </button>
+                    </div>
+
+                    <!--2010 march book-->
+                    <div class="b-wrapper" loading="lazy" data-aos="fade-up">
+                        <img loading="lazy" src="book-wrapper/2010 march.jpg" alt="Book 2">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <button class="order-btn">
+                            <a href="books/2010 March it book (1).pdf" target="_blank" aria-label="illanthoodhu G mail">
+                                view
+                            </a>
+                        </button>
+                    </div>
+
+                    <!--2018 sept book-->
+                    <div class="b-wrapper" loading="lazy" data-aos="fade-up">
+                        <img loading="lazy" src="book-wrapper/2018 sept.jpg" alt="Book 2">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <button class="order-btn">
+                            <a href="books/2018 sep.pdf" target="_blank" aria-label="illanthoodhu G mail">
+                                view
+                            </a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </section>
 
     <br><br><br>
@@ -436,7 +591,8 @@ function updateOnScroll() {
                 </svg>
             </a>
 
-            <a href="https://www.google.com/maps?q=4M3R+4M2,+Mayiladuthurai+-+Akkur+Road,+Mannampandal,+Nagapattinam+District,+Mayiladuthurai,+Tamil+Nadu+609305" target="_blank" tabindex="0" aria-label="My location">
+            <a href="https://www.google.com/maps?q=4M3R+4M2,+Mayiladuthurai+-+Akkur+Road,+Mannampandal,+Nagapattinam+District,+Mayiladuthurai,+Tamil+Nadu+609305"
+                target="_blank" tabindex="0" aria-label="My location">
                 <svg viewBox="0 0 384 512" class="SocialHandle" width="20" height="20">
                     <path
                         d="M192 0C86 0 0 86 0 192c0 87.3 128 271.5 176.5 340.2 8.5 11.6 26.5 11.6 35 0C256 463.5 384 279.3 384 192 384 86 298 0 192 0zm0 272a80 80 0 1 1 0-160 80 80 0 1 1 0 160z" />
@@ -455,13 +611,13 @@ function updateOnScroll() {
         </div>
         <div class="sponsor-logos">
             <a href="https://maps.app.goo.gl/qonjVE3i2aGFH4xD9" target="_blank">
-                <img src="images/arc-logo.jpg" alt="Sponsor">
+                <img loading="lazy" src="sponcers/arc-logo.jpg" alt="Sponsor">
             </a>
             <a href="https://maps.app.goo.gl/ncKCqBqA7KEGcAVY8" target="_blank">
-                <img src="images/narayanan-logo.jpg" alt="Sponsor">
+                <img loading="lazy" src="sponcers/narayanan-logo.jpg" alt="Sponsor">
             </a>
             <a href="https://g.co/kgs/jQmruw8" target="_blank">
-                <img src="images/babu-logo.jpg" alt="Sponsor">
+                <img loading="lazy" src="sponcers/babu-logo.jpg" alt="Sponsor">
             </a>
         </div>
         </div>
