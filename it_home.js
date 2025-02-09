@@ -29,12 +29,11 @@ window.addEventListener("scroll", function () {
 const images = [
     "current-pic/1.jpg",
     "current-pic/2.jpg",
-    "current-pic/3.jpg",
     "current-pic/4.jpg",
     "current-pic/5.jpg",
+    "current-pic/8.jpg",
     "current-pic/6.jpg",
     "current-pic/7.jpg",
-    "current-pic/8.jpg",
     "current-pic/9.jpg",
 ];
 let currentImageIndex = 0;
@@ -93,8 +92,6 @@ function nextImage() {
     currentImageIndex = (currentImageIndex + 1) % images.length;
     changeImage(currentImageIndex);
 }
-
-// Read More/Close History
 function read_more_history() {
     const mainContent = document.getElementById("mainContent");
     const fullView = document.getElementById("fullView");
@@ -103,14 +100,16 @@ function read_more_history() {
     mainContent.style.opacity = "0";
     mainContent.style.visibility = "hidden";
 
-    // Wait for the fade-out transition to complete before displaying the full view
+    // Disable body scroll
+    document.body.style.overflow = "hidden";
+
     setTimeout(() => {
         fullView.style.display = "block";
         setTimeout(() => {
             fullView.style.opacity = "1";
             fullView.style.visibility = "visible";
-        }, 50); // Small delay to ensure display takes effect before opacity
-    }, 500); // Match this duration with your CSS transition timing
+        }, 50);
+    }, 500);
 }
 
 function close_history() {
@@ -121,12 +120,14 @@ function close_history() {
     fullView.style.opacity = "0";
     fullView.style.visibility = "hidden";
 
-    // Wait for the fade-out transition to complete before hiding from layout
     setTimeout(() => {
         fullView.style.display = "none";
         mainContent.style.opacity = "1";
         mainContent.style.visibility = "visible";
-    }, 500); // Match this duration with your CSS transition timing
+
+        // Re-enable scrolling
+        document.body.style.overflow = "auto";
+    }, 500);
 }
 
 

@@ -8,9 +8,20 @@
     <link rel="icon" type="image/png" sizes="70x70" href="images/IT_BIRD_042804.png">
     <script src="it_home.js" defer></script>
     <title>Illanthoodhu</title>
+    <!-- AOS Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 
 <body>
+    <!--delay effect-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: false,
+        });
+    </script>
+
     <!------------header section------------>
     <header>
         <div id="preloader"></div>
@@ -47,12 +58,12 @@
         </div>
     </div>
     <!-----------home section----------->
-    <main id="home">
+    <main id="home" data-aos="fade-up" data-aos-delay="0">
         <video autoplay loop muted playsinline id="bg-video">
             <!-- Provide multiple video formats for better compatibility -->
-            <source src="avc-video.mp4" type="video/mp4">
-            <source src="avc-video.mp4" type="video/webm">
-            <source src="avc-video.mp4" type="video/ogg">
+            <source src="avc-bg-video.mp4" type="video/mp4">
+            <source src="avc-bg-video.mp4" type="video/webm">
+            <source src="avc-bg-video.mp4" type="video/ogg">
         </video>
         <div id="video-overlay"></div>
         <div class="logo">
@@ -82,11 +93,11 @@
 
     <!-----------section one----------->
     <section id="one">
-        <div class="heading">
+        <div class="heading" data-aos="fade-up" data-aos-delay="100">
             <p>the current year</p>
         </div>
         <br>
-        <div class="gallery-container">
+        <div class="gallery-container" data-aos="fade-up" data-aos-delay="200">
             <div class="main-image">
                 <img loading="lazy" id="mainImg" src="current-pic/main-pic.jpg" alt="Main Image">
             </div>
@@ -97,9 +108,9 @@
                 <img loading="lazy" src="current-pic/2.jpg" alt="Thumbnail 2" onclick="changeImage(1)">
                 <img loading="lazy" src="current-pic/4.jpg" alt="Thumbnail 4" onclick="changeImage(3)">
                 <img loading="lazy" src="current-pic/5.jpg" alt="Thumbnail 5" onclick="changeImage(4)">
-                <img loading="lazy" src="current-pic/6.jpg" alt="Thumbnail 6" onclick="changeImage(5)">
-                <img loading="lazy" src="current-pic/7.jpg" alt="Thumbnail 7" onclick="changeImage(6)">
-                <img loading="lazy" src="current-pic/8.jpg" alt="Thumbnail 8" onclick="changeImage(7)">
+                <img loading="lazy" src="current-pic/8.jpg" alt="Thumbnail 6" onclick="changeImage(5)">
+                <img loading="lazy" src="current-pic/6.jpg" alt="Thumbnail 7" onclick="changeImage(6)">
+                <img loading="lazy" src="current-pic/7.jpg" alt="Thumbnail 8" onclick="changeImage(7)">
                 <img loading="lazy" src="current-pic/9.jpg" alt="Thumbnail 9" onclick="changeImage(8)">
                 <img loading="lazy" src="current-pic/main-pic.jpg" alt="Thumbnail 9" onclick="changeImage(9)">
             </div>
@@ -119,23 +130,23 @@
         <br><br><br>
 
         <!--current year editorial board-->
-        <div class="editorial-board">
+        <div class="editorial-board" data-aos="fade-up" data-aos-delay="200">
             <div class="sub-heading">
                 <p>36th Editorial Board</p>
             </div>
             <br>
             <p class="ed-editor">
-                <b>Co-ordinator: </b>"Sir"
+                <b>Co-ordinator: </b>"Mr.T.Sebasthi John Baskar"
                 <br>
-                <b>Editor: </b>"Karthi"
+                <b>Editor: </b>"M.Karthi"
             </p>
             <br>
             <div class="ed-element">
                 <p class="ed-para">
                     The full editorial board
                 </p>
-                <button class="resume-btn" id="resume-btn" onclick="openURL()">
-                    view
+                <button class="order-btn" id="order-btn" onclick="openURL()">
+                   View Now
                 </button>
             </div>
         </div>
@@ -149,7 +160,7 @@
         <br><br><br>
 
         <!--current year book-->
-        <div id="c-book" data-aos="fade-up" data-aos-delay="100">
+        <div id="c-book" data-aos="fade-up" data-aos-delay="250">
             <div class="sub-heading">
                 <p>36th year books</p>
             </div>
@@ -157,9 +168,10 @@
             <div class="cb-item">
                 <div class="cb-wrapper" data-aos="fade-up">
                     <img loading="lazy" src="book-wrapper/2024 sept.jpg" alt="Book 1">
+                    <br>
                     <button class="order-btn">
                         <a href="mailto:illanthoodhu32@gmail.con" target="_blank" aria-label="illanthoodhu G mail">
-                            order now
+                            Order Now
                         </a>
                     </button>
                 </div>
@@ -178,11 +190,11 @@
 
         <div class="ad-content">
             <video id="adVideo" autoplay muted loop playsinline>
-                <source src="avc-video.mp4" type="video/mp4">
+                <source src="avc-bg-video.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video><br>
             <div class="ad-name">
-                <p>Lorem ipsum dolor sit amet.</p>
+                <p>2001 september Book</p>
             </div>
         </div>
 
@@ -200,15 +212,16 @@
 
     <!-----------section two(history)----------->
     <section id="two">
-        <div class="heading">
+        <div class="heading" data-aos="fade-up" data-aos-delay="100">
             <p>History</p>
         </div>
         <br>
         <!-- First set of visible sections -->
-        <div class="history-sections" id="visible-sections">
+        <div class="history-sections" id="visible-sections" data-aos="fade-up" data-aos-delay="200">
 
             <article class="introduction">
                 <h2 class="fade-in">Introduction: The Spark of Ilandhoothu</h2>
+                <br>
                 <p class="fade-in">In 1987, during the second-year college curriculum, a course titled "Introduction to
                     Journalism" became the turning point in the life of Radha Krishnan. It was through this course that
                     he was first introduced to the world of journalism, sparking a passion that would change the course
@@ -216,21 +229,23 @@
                     Department, whose teaching style deeply inspired Radha Krishnan. Under the guidance of Professor
                     Sengaiyan, Radha Krishnan was encouraged to further pursue journalism.</p>
 
-                <div class="founder-image">
+                <div class="founder-image" data-aos="fade-up" data-aos-delay="200">
                     <img loading="lazy" src="images/founder-of-it.jpg" alt="founder of illanthoodhu">
                     <p>The Founder of Illanthoodhu <br> <b>"Mr.Radha Krishnan"</b></p>
                 </div>
             </article>
 
-            <article class="beginning">
+            <article class="beginning" data-aos="fade-up" data-aos-delay="200">
+                <br>
                 <h2 class="fade-in">A New Beginning: Launching the Journal</h2>
+                <br>
                 <p class="fade-in">Radha Krishnan, feeling the need to create a space for student expression, shared his
                     idea with Professor Venkatasalam, the head of the Business Studies Department. He received further
                     encouragement from him. The initial steps towards launching a student-run journal began, and the
                     project was named "Amritharajagam," under a pen name. Radha Krishnan was motivated to continue
                     learning about journalism and eventually decided that the journal should be a long-term project.</p>
 
-                <div class="image">
+                <div class="image" data-aos="fade-up" data-aos-delay="200">
                     <img loading="lazy" src="old-pics/one.jpg" alt="Students working together">
                 </div>
             </article>
@@ -239,26 +254,28 @@
         <!-- Hidden sections-->
         <div class="history-sections hidden" id="hidden-sections-1">
             <article class="growth">
-                <h2 class="fade-in">The Growth of the Journal: A Student-Centric Publication</h2>
+                <h2 class="fade-in">The Growth of the Journal: A Student - Centric Publication</h2>
+                <br>
                 <p class="fade-in">With the help of Professor Sengaiyan, Radha Krishnan approached the principal of the
                     college, Dr. R. Balasubramanian, seeking approval to start the journal. The principal agreed,
                     provided that the journal did not reflect negatively on the professors or the college. Radha
                     Krishnan was asked to document his plans, and he eagerly set to work, ensuring that the journal
                     would showcase the writing talents of the students.</p>
 
-                <div class="image">
+                <div class="image" data-aos="fade-up" data-aos-delay="200">
                     <img loading="lazy" src="old-pics/two.jpg" alt="Students working together">
                 </div>
             </article>
 
             <article class="funding">
                 <h2 class="fade-in">Funding and Distribution: Managing the First Print Run</h2>
+                <br>
                 <p class="fade-in">The first edition of Ilandhoothu was released during the college's annual festival,
                     marking the official debut of the journal. The layout, color scheme, and publication details were
                     carefully considered, including the use of yellow in the design. The magazine was printed and sold,
                     with proceeds used to fund the college’s annual events.</p>
 
-                <div class="image">
+                <div class="image" data-aos="fade-up" data-aos-delay="200">
                     <img loading="lazy" src="images/printing.jpg" alt="Printing of the first edition">
                 </div>
             </article>
@@ -267,34 +284,39 @@
         <div class="history-sections hidden" id="hidden-sections-2">
             <article class="leadership">
                 <h2 class="fade-in">Leadership Transition: Empowering the Next Generation</h2>
+                <br>
                 <p class="fade-in">As Radha Krishnan looked to the future, he recognized the importance of a smooth
                     leadership transition. He mentored Aruna Ramesh, who took over as the editor, preparing her for the
                     challenges of running the journal. Even though Aruna had no prior knowledge of journalism, Radha
                     Krishnan's guidance helped her develop the necessary skills.</p>
 
-                <div class="image">
+                <div class="image" data-aos="fade-up" data-aos-delay="200">
                     <img loading="lazy" src="images/mentorship.jpg" alt="Radha Krishnan mentoring Aruna Ramesh">
                 </div>
             </article>
 
             <article class="conclusion">
                 <h2 class="fade-in">Conclusion: A Legacy of Student Expression</h2>
+                <br>
                 <p class="fade-in">The journey of Ilandhoothu is a testament to the power of student initiative,
                     leadership, and expression. What began as a small project in 1987 has grown into a platform that
                     continues to give students a voice in their academic community, encouraging creativity and fostering
                     a sense of collaboration.</p>
 
-                <div class="image">
+                <div class="image" data-aos="fade-up" data-aos-delay="200">
                     <img loading="lazy" src="images/group-photo.jpg" alt="Group photo of students and faculty">
                 </div>
             </article>
         </div>
 
         <!-- Buttons to toggle sections -->
-        <button class="button" id="read-more-btn-1" onclick="toggleSections('1')">Read More</button>
-        <button class="button" id="read-more-btn-2" onclick="toggleSections('2')" style="display:none;">Read
+        <button class="order-btn" id="read-more-btn-1" onclick="toggleSections('1')" data-aos="fade-up"
+            data-aos-delay="200">Read More</button>
+        <button class="order-btn" id="read-more-btn-2" onclick="toggleSections('2')" style="display:none;"
+            data-aos="fade-up" data-aos-delay="200">Read
             More</button>
-        <button class="button" id="show-less-btn" onclick="toggleSections('less')" style="display:none;">Show
+        <button class="order-btn" id="show-less-btn" onclick="toggleSections('less')" style="display:none;"
+            data-aos="fade-up" data-aos-delay="200">Show
             Less</button>
 
     </section>
@@ -302,18 +324,23 @@
     <br><br><br>
 
     <!-----------section three(library)----------->
-    <section id="three">
-        <div id="old-book" data-aos="fade-up" data-aos-delay="100">
+    <section id="three"   data-aos="fade-up" data-aos-delay="200">
+        <div class="heading"   data-aos="fade-up">
+            <p>library</p>
+        </div>
+        <br>
+        <div id="old-book">
 
-            <div class="heading">
-                <p>library</p>
-            </div>
-            <br>
-            <div class="old-book-div">
                 <p class="ob-contant">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam provident id sunt veniam possimus
-                    tempora illo quos laborum esse fuga?
+                    We have diligently gathered and curated the complete archive of ILANTHOODHU, preserving its rich legacy from the very first edition to the latest. This collection serves as a testament to its journey, ensuring that every publication remains accessible to readers, researchers, and enthusiasts. Click the button below to explore the collection.
                 </p>
+                <br>
+
+                <button id="viewLibraryBtn" class="order-btn">
+                    View Library
+                </button>
+
+                <br>
                 <br>
                 <div class="sub-heading">
                     <p>old editorial board</p>
@@ -324,23 +351,18 @@
                         editorial board
                     </p>
 
-                    <button class="resume-btn" id="resume-btn" onclick="openURL()">
-                        view
+                    <button class="order-btn" id="order-btn" onclick="openURL()">
+                        View Now
                     </button>
                 </div>
+
                 <script>
                     function openURL() {
-                        var url = "all-editorial-board.pdf";
+                        var url = "old-editorial-board.pdf";
                         window.open(url, "_blank");
                     }
                 </script>
-            </div>
             <br>
-            <p class="ob-contant">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </p>
-            <br>
-            <button id="viewLibraryBtn" class="view-library-btn">View Library</button>
         </div>
 
         <!-- Hidden Full-Screen Library Page -->
@@ -350,19 +372,19 @@
             <br><br><br>
 
             <div class="library-content">
-                <div class="heading">
+                <div class="heading" data-aos="fade-up" data-aos-delay="100">
                     <p>library</p>
                 </div>
 
-                <div class="b-item">
+                <div class="b-item" data-aos="fade-up" data-aos-delay="200">
                     <!--1999-special book-->
-                    <div class="b-wrapper" loading="lazy" data-aos="fade-up">
+                    <div class="b-wrapper" data-aos="fade-up">
                         <img loading="lazy" src="book-wrapper/1999 sepecial book.jpg" alt="Book 1">
-                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>1999 sepcial Book</p>
                         <button class="order-btn">
                             <a href="books/1999-10th_Anniversary-Special_Book.pdf" target="_blank"
                                 aria-label="illanthoodhu G mail">
-                                view
+                                View Now
                             </a>
                         </button>
                     </div>
@@ -370,10 +392,10 @@
                     <!--2001 sept book-->
                     <div class="b-wrapper" loading="lazy" data-aos="fade-up">
                         <img loading="lazy" src="book-wrapper/2001 sept.jpg" alt="Book 2">
-                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>2001 september Book</p>
                         <button class="order-btn">
                             <a href="books/2001-Sep.pdf" target="_blank" aria-label="illanthoodhu G mail">
-                                view
+                                View Now
                             </a>
                         </button>
                     </div>
@@ -381,10 +403,10 @@
                     <!--2002 march book-->
                     <div class="b-wrapper" loading="lazy" data-aos="fade-up">
                         <img loading="lazy" src="book-wrapper/2002 march.jpg" alt="Book 2">
-                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>2002 march Book</p>
                         <button class="order-btn">
                             <a href="books/2002-March.pdf" target="_blank" aria-label="illanthoodhu G mail">
-                                view
+                                View Now
                             </a>
                         </button>
                     </div>
@@ -392,10 +414,10 @@
                     <!--2002 sept book-->
                     <div class="b-wrapper" loading="lazy" data-aos="fade-up">
                         <img loading="lazy" src="book-wrapper/2002 sept.jpg" alt="Book 2">
-                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>2002 september Book</p>
                         <button class="order-btn">
                             <a href="books/2002-Sep.pdf" target="_blank" aria-label="illanthoodhu G mail">
-                                view
+                                View Now
                             </a>
                         </button>
                     </div>
@@ -403,10 +425,10 @@
                     <!--2003 march book-->
                     <div class="b-wrapper" loading="lazy" data-aos="fade-up">
                         <img loading="lazy" src="book-wrapper/2003 march.jpg" alt="Book 2">
-                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>2003 marchBook</p>
                         <button class="order-btn">
                             <a href="books/2003-March.pdf" target="_blank" aria-label="illanthoodhu G mail">
-                                view
+                                View Now
                             </a>
                         </button>
                     </div>
@@ -414,10 +436,10 @@
                     <!--2003 sept book-->
                     <div class="b-wrapper" loading="lazy" data-aos="fade-up">
                         <img loading="lazy" src="book-wrapper/2003 sept.jpg" alt="Book 2">
-                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>2003 september Book</p>
                         <button class="order-btn">
                             <a href="books/2003-Sep.pdf" target="_blank" aria-label="illanthoodhu G mail">
-                                view
+                                View Now
                             </a>
                         </button>
                     </div>
@@ -425,10 +447,10 @@
                     <!--2004 march book-->
                     <div class="b-wrapper" loading="lazy" data-aos="fade-up">
                         <img loading="lazy" src="book-wrapper/2004 march.jpg" alt="Book 2">
-                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>2004 march Book</p>
                         <button class="order-btn">
                             <a href="books/2004-March.pdf" target="_blank" aria-label="illanthoodhu G mail">
-                                view
+                                View Now
                             </a>
                         </button>
                     </div>
@@ -436,10 +458,10 @@
                     <!--2004 sept book-->
                     <div class="b-wrapper" loading="lazy" data-aos="fade-up">
                         <img loading="lazy" src="book-wrapper/2004 sept.jpg" alt="Book 2">
-                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>2004 september Book</p>
                         <button class="order-btn">
                             <a href="books/2004-Sep.pdf" target="_blank" aria-label="illanthoodhu G mail">
-                                view
+                                View Now
                             </a>
                         </button>
                     </div>
@@ -447,10 +469,10 @@
                     <!--2005 sept book-->
                     <div class="b-wrapper" loading="lazy" data-aos="fade-up">
                         <img loading="lazy" src="book-wrapper/2005 sept.jpg" alt="Book 2">
-                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>2005 september Book</p>
                         <button class="order-btn">
                             <a href="books/2005-Sep.pdf" target="_blank" aria-label="illanthoodhu G mail">
-                                view
+                                View Now
                             </a>
                         </button>
                     </div>
@@ -458,10 +480,10 @@
                     <!--2006 sept book-->
                     <div class="b-wrapper" loading="lazy" data-aos="fade-up">
                         <img loading="lazy" src="book-wrapper/2006 sept.jpg" alt="Book 2">
-                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>2006 september Book</p>
                         <button class="order-btn">
                             <a href="books/2006-Sep.pdf" target="_blank" aria-label="illanthoodhu G mail">
-                                view
+                                View Now
                             </a>
                         </button>
                     </div>
@@ -469,10 +491,10 @@
                     <!--2008 20th aniversery sepcial book
                     <div class="b-wrapper" loading="lazy" data-aos="fade-up">
                         <img loading="lazy" src="book-wrapper/" alt="Book 2">
-                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>2001 september Book</p>
                         <button class="order-btn">
                             <a href="" target="_blank" aria-label="illanthoodhu G mail">
-                                view
+                                View Now
                             </a>
                         </button>
                     </div>-->
@@ -480,10 +502,10 @@
                     <!--2008 sept book-->
                     <div class="b-wrapper" loading="lazy" data-aos="fade-up">
                         <img loading="lazy" src="book-wrapper/2008 sept.jpg" alt="Book 2">
-                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>2008 september Book</p>
                         <button class="order-btn">
                             <a href="books/2008-Sep.pdf" target="_blank" aria-label="illanthoodhu G mail">
-                                view
+                                View Now
                             </a>
                         </button>
                     </div>
@@ -491,10 +513,10 @@
                     <!--2009 march book-->
                     <div class="b-wrapper" loading="lazy" data-aos="fade-up">
                         <img loading="lazy" src="book-wrapper/2009 march.jpg" alt="Book 2">
-                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>2009 march Book</p>
                         <button class="order-btn">
                             <a href="books/2009 march.pdf" target="_blank" aria-label="illanthoodhu G mail">
-                                view
+                                View Now
                             </a>
                         </button>
                     </div>
@@ -502,10 +524,10 @@
                     <!--2009 sept book-->
                     <div class="b-wrapper" loading="lazy" data-aos="fade-up">
                         <img loading="lazy" src="book-wrapper/2009 sept.jpg" alt="Book 2">
-                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>2009 september Book</p>
                         <button class="order-btn">
                             <a href="books/2009 setp.pdf" target="_blank" aria-label="illanthoodhu G mail">
-                                view
+                                View Now
                             </a>
                         </button>
                     </div>
@@ -513,10 +535,10 @@
                     <!--2010 march book-->
                     <div class="b-wrapper" loading="lazy" data-aos="fade-up">
                         <img loading="lazy" src="book-wrapper/2010 march.jpg" alt="Book 2">
-                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>2010 march Book</p>
                         <button class="order-btn">
                             <a href="books/2010 March it book (1).pdf" target="_blank" aria-label="illanthoodhu G mail">
-                                view
+                                View Now
                             </a>
                         </button>
                     </div>
@@ -524,10 +546,32 @@
                     <!--2018 sept book-->
                     <div class="b-wrapper" loading="lazy" data-aos="fade-up">
                         <img loading="lazy" src="book-wrapper/2018 sept.jpg" alt="Book 2">
-                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>2018 september Book</p>
                         <button class="order-btn">
                             <a href="books/2018 sep.pdf" target="_blank" aria-label="illanthoodhu G mail">
-                                view
+                                View Now
+                            </a>
+                        </button>
+                    </div>
+
+                    <!--2023 set book-->
+                    <div class="b-wrapper" loading="lazy" data-aos="fade-up">
+                        <img loading="lazy" src="book-wrapper/2023 sept.jpg" alt="Book 2">
+                        <p>2023 september Book</p>
+                        <button class="order-btn">
+                            <a href="books/2023 sept.pdf" target="_blank" aria-label="illanthoodhu G mail">
+                                View Now
+                            </a>
+                        </button>
+                    </div>
+
+                    <!--2023 march book-->
+                    <div class="b-wrapper" loading="lazy" data-aos="fade-up">
+                        <img loading="lazy" src="book-wrapper/2023 march.jpg" alt="Book 2">
+                        <p>2023 march Book</p>
+                        <button class="order-btn">
+                            <a href="books/2023 march.pdf" target="_blank" aria-label="illanthoodhu G mail">
+                                View Now
                             </a>
                         </button>
                     </div>
@@ -541,10 +585,10 @@
 
     <!-----------section four(video)----------->
     <section id="four">
-        <div class="heading">
+        <div class="heading" data-aos="fade-up" data-aos-delay="100">
             <p>Video</p>
         </div>
-        <section class="youtube-section">
+        <section class="youtube-section" data-aos="fade-up" data-aos-delay="200">
             <div class="video-container">
                 <iframe src="https://www.youtube.com/embed/ov2E2fYcmEA?si=3GYV-3L9bvHTTGk5" title="YouTube video player"
                     frameborder="0"
@@ -552,10 +596,12 @@
                     allowfullscreen>
                 </iframe>
             </div>
-            <a href="https://youtube.com/channel/UCSWVu032fMEDwXNavNRhiVw?si=cUo7jaFc-EaE-D_8" class="channel-link"
-                target="_blank">
-                Visit Our YouTube Channel
-            </a>
+            <div class="order-btn">
+                <a href="https://youtube.com/channel/UCSWVu032fMEDwXNavNRhiVw?si=cUo7jaFc-EaE-D_8"
+                    target="_blank">
+                    Visit Our YouTube Channel
+                </a>
+            </div>
         </section>
     </section>
 
@@ -568,16 +614,16 @@
         </div>
         <div class="logos" data-aos="fade-up">
 
-            <a href="https://www.instagram.com/ilanthoodhu_student_magazine?igsh=dmV3Z2FmZ3FjZ2hl" target="_blank"
-                tabindex="0" aria-label="instagram"><svg viewBox="0 0 448 512" class="SocialHandle">
+            <a href="https://www.instagram.com/student_magazine?igsh=dmV3Z2FmZ3FjZ2hl" target="_blank"
+                tabindex="0" aria-label="instagram"><svg ViewBox="0 0 448 512" class="SocialHandle">
                     <path
                         d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
                 </svg>
             </a>
 
 
-            <a href="mailto:illanthoodhu32@gmail.con" target="_blank" aria-label="My G mail"><svg id="GmailLogo"
-                    viewBox="0 0 512 512">
+            <a href="mailto:illanthoodhu32@gmail.conm" target="_blank" aria-label="My G mail"><svg id="GmailLogo"
+                    ViewBox="0 0 512 512">
                     <path
                         d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />
                 </svg>
@@ -585,7 +631,7 @@
 
             <a href="https://youtube.com/channel/UCSWVu032fMEDwXNavNRhiVw?si=cUo7jaFc-EaE-D_8" target="_blank"
                 tabindex="0" aria-label="youtube">
-                <svg viewBox="0 0 576 512" class="SocialHandle" width="40" height="40">
+                <svg ViewBox="0 0 576 512" class="SocialHandle" width="40" height="40">
                     <path
                         d="M549.655 124.083c-6.281-23.652-24.831-42.202-48.483-48.483C456.014 64 288 64 288 64S119.986 64 74.828 75.6c-23.652 6.281-42.202 24.831-48.483 48.483C16 169.242 16 256 16 256s0 86.758 10.345 131.917c6.281 23.652 24.831 42.202 48.483 48.483C119.986 448 288 448 288 448s168.014 0 213.172-11.6c23.652-6.281 42.202-24.831 48.483-48.483C560 342.758 560 256 560 256s0-86.758-10.345-131.917zM232 336V176l144 80-144 80z" />
                 </svg>
@@ -593,7 +639,7 @@
 
             <a href="https://www.google.com/maps?q=4M3R+4M2,+Mayiladuthurai+-+Akkur+Road,+Mannampandal,+Nagapattinam+District,+Mayiladuthurai,+Tamil+Nadu+609305"
                 target="_blank" tabindex="0" aria-label="My location">
-                <svg viewBox="0 0 384 512" class="SocialHandle" width="20" height="20">
+                <svg ViewBox="0 0 384 512" class="SocialHandle" width="20" height="20">
                     <path
                         d="M192 0C86 0 0 86 0 192c0 87.3 128 271.5 176.5 340.2 8.5 11.6 26.5 11.6 35 0C256 463.5 384 279.3 384 192 384 86 298 0 192 0zm0 272a80 80 0 1 1 0-160 80 80 0 1 1 0 160z" />
                 </svg>
