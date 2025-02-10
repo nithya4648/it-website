@@ -695,6 +695,7 @@ article p {
 /* Full-Screen Library Page (Initially Hidden) */
 #three {
     width: 60%;
+    height: fit-content;
 }
 
 /* Full-Screen Library Page */
@@ -1027,7 +1028,7 @@ footer p {
     /*----------section three(library) style---------*/
     #three {
         width: 80%;
-        height: 100vh;
+        height: 100%;
         margin: auto;
     }
 
