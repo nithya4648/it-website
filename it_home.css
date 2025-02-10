@@ -180,7 +180,9 @@ section {
     z-index: 1;
     opacity: 0.8;
 }
-
+.bg-video video{
+    filter: brightness(1.1) contrast(1.2);
+}
 /* Overlay with a subtle color */
 #video-overlay {
     position: absolute;
@@ -188,7 +190,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #2c12002a;
+    background: #2c120013;
     z-index: 2;
 }
 
@@ -496,9 +498,10 @@ section {
     padding-bottom: 5px;
 }
 #adVideo {
+    align-items: center;
     img{
-        height: 90px;
-        width: 150px;
+        height: 150px;
+        width: auto;
     }
 }
 .ad-name{
@@ -506,12 +509,12 @@ section {
     text-align: center;
 }
 .arc1{
-    font-size: 12px;
+    font-size: 20px;
     font-weight: 800;
     color: #2c1200;
 }
 .arc2 p{
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 200;
     color:#402106;
 }
@@ -548,7 +551,7 @@ section {
 .ad-link {
     text-decoration: none;
     color: #007bff;
-    font-size: 12px;
+    font-size: 17px;
     font-weight: bold;
 }
 
@@ -583,6 +586,10 @@ section {
     font-size: 10px;
     font-weight: 300;
     color:#402106;
+}
+.ad-link {
+    font-size: 12px;
+    font-weight: bold;
 }
 }
 
