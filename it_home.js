@@ -160,10 +160,20 @@ function enableMainScroll() {
 // Show full-screen library and disable main content scroll
 viewLibraryBtn.addEventListener("click", () => {
     libraryPage.style.display = "flex";
-    disableMainScroll();
 });
 
 // Hide full-screen library and enable main content scroll
+backBtn.addEventListener("click", () => {
+    libraryPage.style.display = "none";
+    enableMainScroll();
+});
+
+viewLibraryBtn.addEventListener("click", () => {
+    libraryPage.style.display = "flex";
+    libraryPage.style.height = "100vh";  // Forces it to fill the screen
+    disableMainScroll();
+});
+
 backBtn.addEventListener("click", () => {
     libraryPage.style.display = "none";
     enableMainScroll();

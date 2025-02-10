@@ -61,9 +61,9 @@
     <main id="home" data-aos="fade-up" data-aos-delay="0">
         <video autoplay loop muted playsinline id="bg-video">
             <!-- Provide multiple video formats for better compatibility -->
-            <source src="avc-bg-video.mp4" type="video/mp4">
-            <source src="avc-bg-video.mp4" type="video/webm">
-            <source src="avc-bg-video.mp4" type="video/ogg">
+            <source src="avc.mp4" type="video/mp4">
+            <source src="avc.mp4" type="video/webm">
+            <source src="avc.mp4" type="video/ogg">
         </video>
         <div id="video-overlay"></div>
         <div class="logo">
@@ -146,13 +146,13 @@
                     The full editorial board
                 </p>
                 <button class="order-btn" id="order-btn" onclick="openURL()">
-                   View Now
+                    View Now
                 </button>
             </div>
         </div>
         <script>
             function openURL() {
-                var url = "editorial_borard.pdf";
+                var url = "editorial-board.jpg";
                 window.open(url, "_blank");
             }
         </script>
@@ -189,12 +189,12 @@
         </div>
 
         <div class="ad-content">
-            <video id="adVideo" autoplay muted loop playsinline>
-                <source src="avc-bg-video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video><br>
+            <div id="adVideo">
+                <img src="sponcers/ARC_Logo.png">
+            </div><br>
             <div class="ad-name">
-                <p>2001 september Book</p>
+                <p class="arc1">ARC NATESA CHETTIAR & CO</p>
+                <P class="arc2">JEWELLERS</P>
             </div>
         </div>
 
@@ -217,7 +217,7 @@
         </div>
         <br>
         <!-- First set of visible sections -->
-        <div class="history-sections" id="visible-sections" data-aos="fade-up" data-aos-delay="200">
+        <div class="history-sections" id="visible-sections" data-aos="fade-up" data-aos-delay="100">
 
             <article class="introduction">
                 <h2 class="fade-in">Introduction: The Spark of Ilandhoothu</h2>
@@ -229,13 +229,13 @@
                     Department, whose teaching style deeply inspired Radha Krishnan. Under the guidance of Professor
                     Sengaiyan, Radha Krishnan was encouraged to further pursue journalism.</p>
 
-                <div class="founder-image" data-aos="fade-up" data-aos-delay="200">
+                <div class="founder-image" data-aos="fade-up" data-aos-delay="100">
                     <img loading="lazy" src="images/founder-of-it.jpg" alt="founder of illanthoodhu">
                     <p>The Founder of Illanthoodhu <br> <b>"Mr.Radha Krishnan"</b></p>
                 </div>
             </article>
 
-            <article class="beginning" data-aos="fade-up" data-aos-delay="200">
+            <article class="beginning" data-aos="fade-up" data-aos-delay="100">
                 <br>
                 <h2 class="fade-in">A New Beginning: Launching the Journal</h2>
                 <br>
@@ -245,7 +245,7 @@
                     project was named "Amritharajagam," under a pen name. Radha Krishnan was motivated to continue
                     learning about journalism and eventually decided that the journal should be a long-term project.</p>
 
-                <div class="image" data-aos="fade-up" data-aos-delay="200">
+                <div class="image" data-aos="fade-up" data-aos-delay="100">
                     <img loading="lazy" src="old-pics/one.jpg" alt="Students working together">
                 </div>
             </article>
@@ -324,171 +324,176 @@
     <br><br><br>
 
     <!-----------section three(library)----------->
-    <section id="three"   data-aos="fade-up" data-aos-delay="200">
-        <div class="heading"   data-aos="fade-up">
+    <section id="three" data-aos="fade-up" data-aos-delay="200">
+        <div class="heading" data-aos="fade-up">
             <p>library</p>
         </div>
         <br>
         <div id="old-book">
 
-                <p class="ob-contant">
-                    We have diligently gathered and curated the complete archive of ILANTHOODHU, preserving its rich legacy from the very first edition to the latest. This collection serves as a testament to its journey, ensuring that every publication remains accessible to readers, researchers, and enthusiasts. Click the button below to explore the collection.
+            <p class="ob-contant">
+                We have diligently gathered and curated the complete archive of ILANTHOODHU, preserving its rich legacy
+                from the very first edition to the latest. This collection serves as a testament to its journey,
+                ensuring that every publication remains accessible to readers, researchers, and enthusiasts. Click the
+                button below to explore the collection.
+            </p>
+            <br>
+
+            <button id="viewLibraryBtn" class="order-btn">
+                View Library
+            </button>
+
+            <br>
+            <br>
+            <div class="sub-heading">
+                <p>old editorial board</p>
+            </div>
+            <br>
+            <div class="ed-element">
+                <p class="ed-para">
+                    editorial board
                 </p>
-                <br>
 
-                <button id="viewLibraryBtn" class="order-btn">
-                    View Library
+                <button class="order-btn" id="order-btn" onclick="openURL()">
+                    View Now
                 </button>
+            </div>
 
-                <br>
-                <br>
-                <div class="sub-heading">
-                    <p>old editorial board</p>
-                </div>
-                <br>
-                <div class="ed-element">
-                    <p class="ed-para">
-                        editorial board
-                    </p>
-
-                    <button class="order-btn" id="order-btn" onclick="openURL()">
-                        View Now
-                    </button>
-                </div>
-
-                <script>
-                    function openURL() {
-                        var url = "old-editorial-board.pdf";
-                        window.open(url, "_blank");
-                    }
-                </script>
+            <script>
+                function openURL() {
+                    var url = "old-editorial-board.pdf";
+                    window.open(url, "_blank");
+                }
+            </script>
             <br>
         </div>
 
-        <!-- Hidden Full-Screen Library Page -->
-        <div id="libraryPage">
+    </section>
 
-            <button id="backBtn" class="back-btn">&#8592;</button>
-            <br><br><br>
+    <!-- Hidden Full-Screen Library Page -->
+    <div id="libraryPage">
 
-            <div class="library-content">
-                <div class="heading" data-aos="fade-up" data-aos-delay="100">
-                    <p>library</p>
+        <button id="backBtn" class="back-btn">&#8592;</button>
+        <br><br><br>
+
+        <div class="library-content">
+            <div class="heading" data-aos="fade-up" data-aos-delay="100">
+                <p>library</p>
+            </div>
+
+            <div class="b-item" data-aos="fade-up" data-aos-delay="200">
+                <!--1999-special book-->
+                <div class="b-wrapper" data-aos="fade-up">
+                    <img loading="lazy" src="book-wrapper/1999 sepecial book.jpg" alt="Book 1">
+                    <p>1999 sepcial Book</p>
+                    <button class="order-btn">
+                        <a href="books/1999-10th_Anniversary-Special_Book.pdf" target="_blank"
+                            aria-label="illanthoodhu G mail">
+                            View Now
+                        </a>
+                    </button>
                 </div>
 
-                <div class="b-item" data-aos="fade-up" data-aos-delay="200">
-                    <!--1999-special book-->
-                    <div class="b-wrapper" data-aos="fade-up">
-                        <img loading="lazy" src="book-wrapper/1999 sepecial book.jpg" alt="Book 1">
-                        <p>1999 sepcial Book</p>
-                        <button class="order-btn">
-                            <a href="books/1999-10th_Anniversary-Special_Book.pdf" target="_blank"
-                                aria-label="illanthoodhu G mail">
-                                View Now
-                            </a>
-                        </button>
-                    </div>
+                <!--2001 sept book-->
+                <div class="b-wrapper" loading="lazy" data-aos="fade-up">
+                    <img loading="lazy" src="book-wrapper/2001 sept.jpg" alt="Book 2">
+                    <p>2001 september Book</p>
+                    <button class="order-btn">
+                        <a href="books/2001-Sep.pdf" target="_blank" aria-label="illanthoodhu G mail">
+                            View Now
+                        </a>
+                    </button>
+                </div>
 
-                    <!--2001 sept book-->
-                    <div class="b-wrapper" loading="lazy" data-aos="fade-up">
-                        <img loading="lazy" src="book-wrapper/2001 sept.jpg" alt="Book 2">
-                        <p>2001 september Book</p>
-                        <button class="order-btn">
-                            <a href="books/2001-Sep.pdf" target="_blank" aria-label="illanthoodhu G mail">
-                                View Now
-                            </a>
-                        </button>
-                    </div>
+                <!--2002 march book-->
+                <div class="b-wrapper" loading="lazy" data-aos="fade-up">
+                    <img loading="lazy" src="book-wrapper/2002 march.jpg" alt="Book 2">
+                    <p>2002 march Book</p>
+                    <button class="order-btn">
+                        <a href="books/2002-March.pdf" target="_blank" aria-label="illanthoodhu G mail">
+                            View Now
+                        </a>
+                    </button>
+                </div>
 
-                    <!--2002 march book-->
-                    <div class="b-wrapper" loading="lazy" data-aos="fade-up">
-                        <img loading="lazy" src="book-wrapper/2002 march.jpg" alt="Book 2">
-                        <p>2002 march Book</p>
-                        <button class="order-btn">
-                            <a href="books/2002-March.pdf" target="_blank" aria-label="illanthoodhu G mail">
-                                View Now
-                            </a>
-                        </button>
-                    </div>
+                <!--2002 sept book-->
+                <div class="b-wrapper" loading="lazy" data-aos="fade-up">
+                    <img loading="lazy" src="book-wrapper/2002 sept.jpg" alt="Book 2">
+                    <p>2002 september Book</p>
+                    <button class="order-btn">
+                        <a href="books/2002-Sep.pdf" target="_blank" aria-label="illanthoodhu G mail">
+                            View Now
+                        </a>
+                    </button>
+                </div>
 
-                    <!--2002 sept book-->
-                    <div class="b-wrapper" loading="lazy" data-aos="fade-up">
-                        <img loading="lazy" src="book-wrapper/2002 sept.jpg" alt="Book 2">
-                        <p>2002 september Book</p>
-                        <button class="order-btn">
-                            <a href="books/2002-Sep.pdf" target="_blank" aria-label="illanthoodhu G mail">
-                                View Now
-                            </a>
-                        </button>
-                    </div>
+                <!--2003 march book-->
+                <div class="b-wrapper" loading="lazy" data-aos="fade-up">
+                    <img loading="lazy" src="book-wrapper/2003 march.jpg" alt="Book 2">
+                    <p>2003 marchBook</p>
+                    <button class="order-btn">
+                        <a href="books/2003-March.pdf" target="_blank" aria-label="illanthoodhu G mail">
+                            View Now
+                        </a>
+                    </button>
+                </div>
 
-                    <!--2003 march book-->
-                    <div class="b-wrapper" loading="lazy" data-aos="fade-up">
-                        <img loading="lazy" src="book-wrapper/2003 march.jpg" alt="Book 2">
-                        <p>2003 marchBook</p>
-                        <button class="order-btn">
-                            <a href="books/2003-March.pdf" target="_blank" aria-label="illanthoodhu G mail">
-                                View Now
-                            </a>
-                        </button>
-                    </div>
+                <!--2003 sept book-->
+                <div class="b-wrapper" loading="lazy" data-aos="fade-up">
+                    <img loading="lazy" src="book-wrapper/2003 sept.jpg" alt="Book 2">
+                    <p>2003 september Book</p>
+                    <button class="order-btn">
+                        <a href="books/2003-Sep.pdf" target="_blank" aria-label="illanthoodhu G mail">
+                            View Now
+                        </a>
+                    </button>
+                </div>
 
-                    <!--2003 sept book-->
-                    <div class="b-wrapper" loading="lazy" data-aos="fade-up">
-                        <img loading="lazy" src="book-wrapper/2003 sept.jpg" alt="Book 2">
-                        <p>2003 september Book</p>
-                        <button class="order-btn">
-                            <a href="books/2003-Sep.pdf" target="_blank" aria-label="illanthoodhu G mail">
-                                View Now
-                            </a>
-                        </button>
-                    </div>
+                <!--2004 march book-->
+                <div class="b-wrapper" loading="lazy" data-aos="fade-up">
+                    <img loading="lazy" src="book-wrapper/2004 march.jpg" alt="Book 2">
+                    <p>2004 march Book</p>
+                    <button class="order-btn">
+                        <a href="books/2004-March.pdf" target="_blank" aria-label="illanthoodhu G mail">
+                            View Now
+                        </a>
+                    </button>
+                </div>
 
-                    <!--2004 march book-->
-                    <div class="b-wrapper" loading="lazy" data-aos="fade-up">
-                        <img loading="lazy" src="book-wrapper/2004 march.jpg" alt="Book 2">
-                        <p>2004 march Book</p>
-                        <button class="order-btn">
-                            <a href="books/2004-March.pdf" target="_blank" aria-label="illanthoodhu G mail">
-                                View Now
-                            </a>
-                        </button>
-                    </div>
+                <!--2004 sept book-->
+                <div class="b-wrapper" loading="lazy" data-aos="fade-up">
+                    <img loading="lazy" src="book-wrapper/2004 sept.jpg" alt="Book 2">
+                    <p>2004 september Book</p>
+                    <button class="order-btn">
+                        <a href="books/2004-Sep.pdf" target="_blank" aria-label="illanthoodhu G mail">
+                            View Now
+                        </a>
+                    </button>
+                </div>
 
-                    <!--2004 sept book-->
-                    <div class="b-wrapper" loading="lazy" data-aos="fade-up">
-                        <img loading="lazy" src="book-wrapper/2004 sept.jpg" alt="Book 2">
-                        <p>2004 september Book</p>
-                        <button class="order-btn">
-                            <a href="books/2004-Sep.pdf" target="_blank" aria-label="illanthoodhu G mail">
-                                View Now
-                            </a>
-                        </button>
-                    </div>
+                <!--2005 sept book-->
+                <div class="b-wrapper" loading="lazy" data-aos="fade-up">
+                    <img loading="lazy" src="book-wrapper/2005 sept.jpg" alt="Book 2">
+                    <p>2005 september Book</p>
+                    <button class="order-btn">
+                        <a href="books/2005-Sep.pdf" target="_blank" aria-label="illanthoodhu G mail">
+                            View Now
+                        </a>
+                    </button>
+                </div>
 
-                    <!--2005 sept book-->
-                    <div class="b-wrapper" loading="lazy" data-aos="fade-up">
-                        <img loading="lazy" src="book-wrapper/2005 sept.jpg" alt="Book 2">
-                        <p>2005 september Book</p>
-                        <button class="order-btn">
-                            <a href="books/2005-Sep.pdf" target="_blank" aria-label="illanthoodhu G mail">
-                                View Now
-                            </a>
-                        </button>
-                    </div>
+                <!--2006 sept book-->
+                <div class="b-wrapper" loading="lazy" data-aos="fade-up">
+                    <img loading="lazy" src="book-wrapper/2006 sept.jpg" alt="Book 2">
+                    <p>2006 september Book</p>
+                    <button class="order-btn">
+                        <a href="books/2006-Sep.pdf" target="_blank" aria-label="illanthoodhu G mail">
+                            View Now
+                        </a>
+                    </button>
+                </div>
 
-                    <!--2006 sept book-->
-                    <div class="b-wrapper" loading="lazy" data-aos="fade-up">
-                        <img loading="lazy" src="book-wrapper/2006 sept.jpg" alt="Book 2">
-                        <p>2006 september Book</p>
-                        <button class="order-btn">
-                            <a href="books/2006-Sep.pdf" target="_blank" aria-label="illanthoodhu G mail">
-                                View Now
-                            </a>
-                        </button>
-                    </div>
-
-                    <!--2008 20th aniversery sepcial book
+                <!--2008 20th aniversery sepcial book
                     <div class="b-wrapper" loading="lazy" data-aos="fade-up">
                         <img loading="lazy" src="book-wrapper/" alt="Book 2">
                         <p>2001 september Book</p>
@@ -499,87 +504,86 @@
                         </button>
                     </div>-->
 
-                    <!--2008 sept book-->
-                    <div class="b-wrapper" loading="lazy" data-aos="fade-up">
-                        <img loading="lazy" src="book-wrapper/2008 sept.jpg" alt="Book 2">
-                        <p>2008 september Book</p>
-                        <button class="order-btn">
-                            <a href="books/2008-Sep.pdf" target="_blank" aria-label="illanthoodhu G mail">
-                                View Now
-                            </a>
-                        </button>
-                    </div>
+                <!--2008 sept book-->
+                <div class="b-wrapper" loading="lazy" data-aos="fade-up">
+                    <img loading="lazy" src="book-wrapper/2008 sept.jpg" alt="Book 2">
+                    <p>2008 september Book</p>
+                    <button class="order-btn">
+                        <a href="books/2008-Sep.pdf" target="_blank" aria-label="illanthoodhu G mail">
+                            View Now
+                        </a>
+                    </button>
+                </div>
 
-                    <!--2009 march book-->
-                    <div class="b-wrapper" loading="lazy" data-aos="fade-up">
-                        <img loading="lazy" src="book-wrapper/2009 march.jpg" alt="Book 2">
-                        <p>2009 march Book</p>
-                        <button class="order-btn">
-                            <a href="books/2009 march.pdf" target="_blank" aria-label="illanthoodhu G mail">
-                                View Now
-                            </a>
-                        </button>
-                    </div>
+                <!--2009 march book-->
+                <div class="b-wrapper" loading="lazy" data-aos="fade-up">
+                    <img loading="lazy" src="book-wrapper/2009 march.jpg" alt="Book 2">
+                    <p>2009 march Book</p>
+                    <button class="order-btn">
+                        <a href="books/2009 march.pdf" target="_blank" aria-label="illanthoodhu G mail">
+                            View Now
+                        </a>
+                    </button>
+                </div>
 
-                    <!--2009 sept book-->
-                    <div class="b-wrapper" loading="lazy" data-aos="fade-up">
-                        <img loading="lazy" src="book-wrapper/2009 sept.jpg" alt="Book 2">
-                        <p>2009 september Book</p>
-                        <button class="order-btn">
-                            <a href="books/2009 setp.pdf" target="_blank" aria-label="illanthoodhu G mail">
-                                View Now
-                            </a>
-                        </button>
-                    </div>
+                <!--2009 sept book-->
+                <div class="b-wrapper" loading="lazy" data-aos="fade-up">
+                    <img loading="lazy" src="book-wrapper/2009 sept.jpg" alt="Book 2">
+                    <p>2009 september Book</p>
+                    <button class="order-btn">
+                        <a href="books/2009 setp.pdf" target="_blank" aria-label="illanthoodhu G mail">
+                            View Now
+                        </a>
+                    </button>
+                </div>
 
-                    <!--2010 march book-->
-                    <div class="b-wrapper" loading="lazy" data-aos="fade-up">
-                        <img loading="lazy" src="book-wrapper/2010 march.jpg" alt="Book 2">
-                        <p>2010 march Book</p>
-                        <button class="order-btn">
-                            <a href="books/2010 March it book (1).pdf" target="_blank" aria-label="illanthoodhu G mail">
-                                View Now
-                            </a>
-                        </button>
-                    </div>
+                <!--2010 march book-->
+                <div class="b-wrapper" loading="lazy" data-aos="fade-up">
+                    <img loading="lazy" src="book-wrapper/2010 march.jpg" alt="Book 2">
+                    <p>2010 march Book</p>
+                    <button class="order-btn">
+                        <a href="books/2010 March it book (1).pdf" target="_blank" aria-label="illanthoodhu G mail">
+                            View Now
+                        </a>
+                    </button>
+                </div>
 
-                    <!--2018 sept book-->
-                    <div class="b-wrapper" loading="lazy" data-aos="fade-up">
-                        <img loading="lazy" src="book-wrapper/2018 sept.jpg" alt="Book 2">
-                        <p>2018 september Book</p>
-                        <button class="order-btn">
-                            <a href="books/2018 sep.pdf" target="_blank" aria-label="illanthoodhu G mail">
-                                View Now
-                            </a>
-                        </button>
-                    </div>
+                <!--2018 sept book-->
+                <div class="b-wrapper" loading="lazy" data-aos="fade-up">
+                    <img loading="lazy" src="book-wrapper/2018 sept.jpg" alt="Book 2">
+                    <p>2018 september Book</p>
+                    <button class="order-btn">
+                        <a href="books/2018 sep.pdf" target="_blank" aria-label="illanthoodhu G mail">
+                            View Now
+                        </a>
+                    </button>
+                </div>
 
-                    <!--2023 set book-->
-                    <div class="b-wrapper" loading="lazy" data-aos="fade-up">
-                        <img loading="lazy" src="book-wrapper/2023 sept.jpg" alt="Book 2">
-                        <p>2023 september Book</p>
-                        <button class="order-btn">
-                            <a href="books/2023 sept.pdf" target="_blank" aria-label="illanthoodhu G mail">
-                                View Now
-                            </a>
-                        </button>
-                    </div>
+                <!--2023 set book-->
+                <div class="b-wrapper" loading="lazy" data-aos="fade-up">
+                    <img loading="lazy" src="book-wrapper/2023 sept.jpg" alt="Book 2">
+                    <p>2023 september Book</p>
+                    <button class="order-btn">
+                        <a href="books/2023 sept.pdf" target="_blank" aria-label="illanthoodhu G mail">
+                            View Now
+                        </a>
+                    </button>
+                </div>
 
-                    <!--2023 march book-->
-                    <div class="b-wrapper" loading="lazy" data-aos="fade-up">
-                        <img loading="lazy" src="book-wrapper/2023 march.jpg" alt="Book 2">
-                        <p>2023 march Book</p>
-                        <button class="order-btn">
-                            <a href="books/2023 march.pdf" target="_blank" aria-label="illanthoodhu G mail">
-                                View Now
-                            </a>
-                        </button>
-                    </div>
+                <!--2023 march book-->
+                <div class="b-wrapper" loading="lazy" data-aos="fade-up">
+                    <img loading="lazy" src="book-wrapper/2023 march.jpg" alt="Book 2">
+                    <p>2023 march Book</p>
+                    <button class="order-btn">
+                        <a href="books/2023 march.pdf" target="_blank" aria-label="illanthoodhu G mail">
+                            View Now
+                        </a>
+                    </button>
                 </div>
             </div>
         </div>
+    </div>
 
-    </section>
 
     <br><br><br>
 
@@ -597,8 +601,7 @@
                 </iframe>
             </div>
             <div class="order-btn">
-                <a href="https://youtube.com/channel/UCSWVu032fMEDwXNavNRhiVw?si=cUo7jaFc-EaE-D_8"
-                    target="_blank">
+                <a href="https://youtube.com/channel/UCSWVu032fMEDwXNavNRhiVw?si=cUo7jaFc-EaE-D_8" target="_blank">
                     Visit Our YouTube Channel
                 </a>
             </div>
@@ -614,15 +617,15 @@
         </div>
         <div class="logos" data-aos="fade-up">
 
-            <a href="https://www.instagram.com/student_magazine?igsh=dmV3Z2FmZ3FjZ2hl" target="_blank"
-                tabindex="0" aria-label="instagram"><svg ViewBox="0 0 448 512" class="SocialHandle">
+            <a href="https://www.instagram.com/ilanthoodhu_student_magazine?igsh=dmV3Z2FmZ3FjZ2hl" target="_blank" tabindex="0"
+                aria-label="instagram"><svg ViewBox="0 0 448 512" class="SocialHandle">
                     <path
                         d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
                 </svg>
             </a>
 
 
-            <a href="mailto:illanthoodhu32@gmail.conm" target="_blank" aria-label="My G mail"><svg id="GmailLogo"
+            <a href="mailto:illanthoodhu32@gmail.com" target="_blank" aria-label="My G mail"><svg id="GmailLogo"
                     ViewBox="0 0 512 512">
                     <path
                         d="M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z" />

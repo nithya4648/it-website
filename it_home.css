@@ -449,10 +449,10 @@ section {
     border-radius: 5px;
     font-size: 14px;
     font-weight: 400;
-
-    a {
+    color: #e9d0c2;
+    a{
         text-decoration: none;
-        color: #000000;
+        color: #e9d0c2;
         font-family: 'Times New Roman', Times, serif;
     }
 
@@ -495,7 +495,26 @@ section {
     color: #666;
     padding-bottom: 5px;
 }
-
+#adVideo {
+    img{
+        height: 90px;
+        width: 150px;
+    }
+}
+.ad-name{
+    justify-content: center;
+    text-align: center;
+}
+.arc1{
+    font-size: 12px;
+    font-weight: 800;
+    color: #2c1200;
+}
+.arc2 p{
+    font-size: 10px;
+    font-weight: 200;
+    color:#402106;
+}
 .sponsored {
     font-weight: bold;
     color: #888;
@@ -515,10 +534,9 @@ section {
 }
 
 /* Ad Video */
-.ad-content video {
+.ad-content div {
     border-radius: 5px;
     max-height: 150px;
-    border: #000 solid 1px;
 }
 
 /* Ad Footer */
@@ -530,7 +548,7 @@ section {
 .ad-link {
     text-decoration: none;
     color: #007bff;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
 }
 
@@ -550,10 +568,22 @@ section {
         align-items: center;
     }
 
-    .ad-video {
-        height: 180px;
-    }
-
+    #adVideo {
+        img{
+            height: 90px;
+            width: 170px;
+        }
+}
+.arc1{
+    font-size: 15px;
+    font-weight: 600;
+    color: #2c1200e5;
+}
+.arc2{
+    font-size: 10px;
+    font-weight: 300;
+    color:#402106;
+}
 }
 
 /*----------section two(history) style---------*/
@@ -657,7 +687,7 @@ article p {
 /*----------section three(library) style---------*/
 /* Full-Screen Library Page (Initially Hidden) */
 #three {
-    width: 70%;
+    width: 60%;
     height: auto;
 }
 
@@ -667,29 +697,29 @@ article p {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: 150vh;  /* Ensure full viewport height */
     background: rgba(0, 0, 0, 0.95);
     z-index: 10000;
     display: none; /* Initially hidden */
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 20px;
-    overflow-y: auto; /
+    justify-content: flex-start;
+    overflow-y: auto;
 }
 
 .library-content::-webkit-scrollbar {
     display: none;
 }
 
-/* Library Content */
 .library-content {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    justify-content: flex-start;
     overflow-y: auto;
 }
+
 
 /* Back Button */
 .back-btn {
@@ -702,7 +732,7 @@ article p {
     background: none;
     border: none;
     cursor: pointer;
-    color: #ffffff;
+    color: #e9d0c2;
     padding: 5px;
 }
 
@@ -991,6 +1021,7 @@ footer p {
     /*----------section three(library) style---------*/
     #three {
         width: 80%;
+        height: 100vh;
         margin: auto;
     }
 
