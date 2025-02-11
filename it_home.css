@@ -221,6 +221,13 @@ section {
     transition: all 0.3s ease;
 }
 
+/* Portrait Video for Small Screens */
+@media (max-width: 768px) {
+    #bg-video {
+        content: url('avc-portrait.mp4');
+    }
+}
+
 /*----------section one(current year-pic, editorial board, book)style---------*/
 #one {
     width: 90%;
@@ -691,7 +698,7 @@ article p {
 
 .founder-image p {
     b {
-        color:#000000;
+        color: #000000;
     }
 }
 
@@ -1041,7 +1048,6 @@ footer {
     }
 
     .developer-section {
-        max-width: 320px;
         overflow: hidden;
     }
 

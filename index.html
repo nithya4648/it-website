@@ -81,6 +81,26 @@
                     video.parentNode.replaceChild(fallbackImage, video);
                 });
             });
+            function updateVideoSource() {
+                const video = document.getElementById("bg-video");
+                const currentSrc = video.querySelector("source").src;
+
+                if (window.matchMedia("(max-width: 768px)").matches) {
+                    if (!currentSrc.includes("avc-portrait.mp4")) {
+                        video.querySelector("source").src = "avc-portrait.mp4";
+                        video.load();  // Reload the video
+                    }
+                } else {
+                    if (!currentSrc.includes("avc.mp4")) {
+                        video.querySelector("source").src = "avc.mp4";
+                        video.load();
+                    }
+                }
+            }
+
+            // Run on page load & resize
+            updateVideoSource();
+            window.addEventListener("resize", updateVideoSource);
         </script>
     </main>
 
@@ -134,14 +154,14 @@
                 <p class="ed-sub">Co-ordinator</p>
                 <br>
                 <p class="ed-name">Mr.T.Sebasthi John Baskar</p>
-                <p class="ed-dep">(Associative Professor of Tamil)</p>
+                <p class="ed-dep">Associate Professor, Department of Tamil</p>
 
                 <br><br>
 
                 <p class="ed-sub">Editor</p>
                 <br>
                 <p class="ed-name">M.Karthi</p>
-                <p class="ed-dep">(BSc Chemistry Final Year)</p>
+                <p class="ed-dep">BSc Chemistry Final Year</p>
             </div>
             <br>
             <div class="ed-element">
@@ -234,7 +254,7 @@ Thank you!">
                 <br>
                 <div class="founder-image" data-aos="fade-up" data-aos-delay="100">
                     <img loading="lazy" src="images/founder-of-it.jpg" alt="founder of illanthoodhu">
-                    <p>The Founder of Ilanthoodhu <br> <b>"Mr.Radha Krishnan"</b></p>
+                    <p>The Founder of Ilanthoodhu <br> <b>"Mr.A.Z.Radha Krishnan"</b></p>
                 </div>
             </article>
             <br>
