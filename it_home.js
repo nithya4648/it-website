@@ -139,11 +139,13 @@ video.addEventListener('error', () => {
     document.querySelector('#home').classList.add('fallback');
 });
 
-//library
+//lib
 const viewLibraryBtn = document.getElementById("viewLibraryBtn");
 const libraryPage = document.getElementById("libraryPage");
 const backBtn = document.getElementById("backBtn");
-const mainContent = document.getElementById("three"); // Wrap main content in a div
+const mainContent = document.getElementById("three");
+const booksContainer = document.getElementById("booksContainer");
+const libraryBooksContainer = document.getElementById("libraryBooksContainer");
 
 // Function to disable scrolling on the main content
 function disableMainScroll() {
@@ -160,6 +162,11 @@ function enableMainScroll() {
 // Show full-screen library and disable main content scroll
 viewLibraryBtn.addEventListener("click", () => {
     libraryPage.style.display = "flex";
+    libraryPage.style.height = "100vh";  // Forces it to fill the screen
+    disableMainScroll();
+
+    // Move books to the libraryPage
+    libraryBooksContainer.innerHTML = booksContainer.innerHTML;
 });
 
 // Hide full-screen library and enable main content scroll
@@ -167,20 +174,6 @@ backBtn.addEventListener("click", () => {
     libraryPage.style.display = "none";
     enableMainScroll();
 });
-
-viewLibraryBtn.addEventListener("click", () => {
-    libraryPage.style.display = "flex";
-    libraryPage.style.height = "100vh";  // Forces it to fill the screen
-    disableMainScroll();
-});
-
-backBtn.addEventListener("click", () => {
-    libraryPage.style.display = "none";
-    enableMainScroll();
-});
-
-
-
 //hustory section
 function toggleSections(section) {
     const sections1 = document.getElementById('hidden-sections-1');

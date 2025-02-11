@@ -37,7 +37,7 @@
             <li><a href="#one">Curent Year</a></li>
             <li><a href="#two">History</a></li>
             <li><a href="#three">Library</a></li>
-            <li><a href="#four">Contact</a></li>
+            <li><a href="#five">Contact</a></li>
         </ul>
     </div>
 
@@ -46,17 +46,17 @@
             <h1 class="name2">இளந்தூது</h1>
             <a href="#menu" id="toggle" onclick="display()"> <span></span></a>
         </div>
-
         <div id="menu">
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#one">Curent Year</a></li>
                 <li><a href="#two">History</a></li>
                 <li><a href="#three">Library</a></li>
-                <li><a href="#four">Contact</a></li>
+                <li><a href="#five">Contact</a></li>
             </ul>
         </div>
     </div>
+
     <!-----------home section----------->
     <main id="home" data-aos="fade-up" data-aos-delay="0">
         <video autoplay loop muted playsinline id="bg-video">
@@ -70,12 +70,10 @@
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 const video = document.getElementById("bg-video");
-
-                // Check if the video is playing
                 video.addEventListener("error", function () {
                     console.error("Video failed to load. Showing fallback image.");
                     const fallbackImage = document.createElement("img");
-                    fallbackImage.src = "images/fallback-image.jpg"; // Path to fallback image
+                    fallbackImage.src = "images/fallback-image.jpg";
                     fallbackImage.alt = "Fallback Image";
                     fallbackImage.style.width = "100%";
                     fallbackImage.style.height = "100%";
@@ -131,12 +129,20 @@
             <div class="sub-heading">
                 <p>36th Editorial Board</p>
             </div>
-            <br>
-            <p class="ed-editor">
-                <b>Co-ordinator: </b>"Mr.T.Sebasthi John Baskar"
+            <br><br>
+            <div class="ed-editor">
+                <p class="ed-sub">Co-ordinator</p>
                 <br>
-                <b>Editor: </b>"M.Karthi"
-            </p>
+                <p class="ed-name">Mr.T.Sebasthi John Baskar</p>
+                <p class="ed-dep">(Associative Professor of Tamil)</p>
+
+                <br><br>
+
+                <p class="ed-sub">Editor</p>
+                <br>
+                <p class="ed-name">M.Karthi</p>
+                <p class="ed-dep">(BSc Chemistry Final Year)</p>
+            </div>
             <br>
             <div class="ed-element">
                 <p class="ed-para">
@@ -167,19 +173,23 @@
                     <img loading="lazy" src="book-wrapper/2024 sept.jpg" alt="Book 1">
                     <br>
                     <button class="order-btn">
-                        <a href="mailto:illanthoodhu32@gmail.con" target="_blank" aria-label="illanthoodhu G mail">
-                            Order Now
+                        <a href="mailto:your-email@example.com?subject=Book Order Inquiry&body=Hello,%0D%0A%0D%0A
+                                 I would like to order the following books:%0D%0A
+                                 Shipping Details:%0D%0A
+                                 Name: [Your Name]%0D%0A
+                                 Address: [Your Address]%0D%0A
+                                 Contact: [Your Phone Number]%0D%0A%0D%0A
+                                 Thank you!">
+                            Order Books
                         </a>
                     </button>
                 </div>
             </div>
         </div>
-
     </section>
 
     <!-----------Google-Style Ad----------->
     <div id="googleAd" class="google-ad">
-
         <div class="ad-header">
             <span class="sponsored">Ad · Sponsored</span>
             <button id="closeAd" class="close-btn">&times;</button>
@@ -198,19 +208,17 @@
         <div class="ad-footer">
             <a href="https://maps.app.goo.gl/qonjVE3i2aGFH4xD9" class="ad-link">Learn More</a>
         </div>
+        <script>
+            document.getElementById("closeAd").addEventListener("click", function () {
+                document.getElementById("googleAd").style.display = "none";
+            });
+        </script>
     </div>
-
-    <script>
-        document.getElementById("closeAd").addEventListener("click", function () {
-            document.getElementById("googleAd").style.display = "none";
-        });
-    </script>
-
 
     <!-----------section two(history)----------->
     <section id="two">
         <div class="heading" data-aos="fade-up" data-aos-delay="100">
-            <p>History</p>
+            <p>History of Ilandhoothu</p>
         </div>
         <br>
         <!-- First set of visible sections -->
@@ -219,86 +227,91 @@
             <article class="introduction">
                 <h2 class="fade-in">Introduction: The Spark of Ilandhoothu</h2>
                 <br>
-                <p class="fade-in">In 1987, during the second-year college curriculum, a course titled "Introduction to
-                    Journalism" became the turning point in the life of Radha Krishnan. It was through this course that
-                    he was first introduced to the world of journalism, sparking a passion that would change the course
-                    of his academic life. The course was taught by Professor K. Sengaiyan, the head of the Tamil
-                    Department, whose teaching style deeply inspired Radha Krishnan. Under the guidance of Professor
-                    Sengaiyan, Radha Krishnan was encouraged to further pursue journalism.</p>
-
+                <p class="fade-in">In 1987, an <b>"Introduction to Journalism"</b> course, taught by Professor K.
+                    Sengaiyan,
+                    inspired Radha Krishnan to pursue journalism. This course ignited a passion that led to the creation
+                    of Ilandhoothu
+                </p>
+                <br>
                 <div class="founder-image" data-aos="fade-up" data-aos-delay="100">
                     <img loading="lazy" src="images/founder-of-it.jpg" alt="founder of illanthoodhu">
                     <p>The Founder of Illanthoodhu <br> <b>"Mr.Radha Krishnan"</b></p>
                 </div>
             </article>
-
+            <br>
             <article class="beginning" data-aos="fade-up" data-aos-delay="100">
-                <br>
                 <h2 class="fade-in">A New Beginning: Launching the Journal</h2>
                 <br>
-                <p class="fade-in">Radha Krishnan, feeling the need to create a space for student expression, shared his
-                    idea with Professor Venkatasalam, the head of the Business Studies Department. He received further
-                    encouragement from him. The initial steps towards launching a student-run journal began, and the
-                    project was named "Amritharajagam," under a pen name. Radha Krishnan was motivated to continue
-                    learning about journalism and eventually decided that the journal should be a long-term project.</p>
-
+                <p class="fade-in">Radha Krishnan, with the encouragement from Professor Venkatasalam, launched the
+                    student-run journal, initially named "Amritharajagam." He envisioned it as a long-term project
+                    dedicated to student expression.
+                </p>
+                <br>
                 <div class="image" data-aos="fade-up" data-aos-delay="100">
                     <img loading="lazy" src="old-pics/one.jpg" alt="Students working together">
                 </div>
             </article>
         </div>
+        <br>
 
         <!-- Hidden sections-->
         <div class="history-sections hidden" id="hidden-sections-1">
             <article class="growth">
-                <h2 class="fade-in">The Growth of the Journal: A Student - Centric Publication</h2>
+                <h2 class="fade-in">Meeting the College Principal: Securing Approval</h2>
                 <br>
-                <p class="fade-in">With the help of Professor Sengaiyan, Radha Krishnan approached the principal of the
-                    college, Dr. R. Balasubramanian, seeking approval to start the journal. The principal agreed,
-                    provided that the journal did not reflect negatively on the professors or the college. Radha
-                    Krishnan was asked to document his plans, and he eagerly set to work, ensuring that the journal
-                    would showcase the writing talents of the students.</p>
-
+                <p class="fade-in">With Professor Sengaiyan's support, Radha Krishnan secured approval from Principal
+                    Dr. R. Balasubramanian, who emphasized the importance of responsible content.
+                    Suggested Picture: A meeting in the principal’s office.
+                </p>
+                <br>
                 <div class="image" data-aos="fade-up" data-aos-delay="200">
-                    <img loading="lazy" src="old-pics/two.jpg" alt="Students working together">
+                    <img loading="lazy" src="old-pics/three.jpg" alt="Students working together">
                 </div>
             </article>
-
+            <br>
             <article class="funding">
-                <h2 class="fade-in">Funding and Distribution: Managing the First Print Run</h2>
+                <h2 class="fade-in">The First Edition: Debuting Ilandhoothu</h2>
                 <br>
-                <p class="fade-in">The first edition of Ilandhoothu was released during the college's annual festival,
-                    marking the official debut of the journal. The layout, color scheme, and publication details were
-                    carefully considered, including the use of yellow in the design. The magazine was printed and sold,
-                    with proceeds used to fund the college’s annual events.</p>
-
+                <p class="fade-in">The first edition of Ilandhoothu was launched at the college's annual festival. The
+                    yellow design and careful planning marked its official debut.</p>
+                <br>
+                <h2 class="fade-in">Growth and Development: A Student-Centric Publication</h2>
+                <br>
+                <p class="fade-in">By November 1989, Ilandhoothu became a monthly publication, focusing solely on
+                    student writing. Each edition contained 30-35 pages and was funded by student contributions.</p>
+                <br>
                 <div class="image" data-aos="fade-up" data-aos-delay="200">
-                    <img loading="lazy" src="old-pics/three.jpg" alt="Printing of the first edition">
+                    <img loading="lazy" src="old-pics/two.jpg" alt="Printing of the first edition">
                 </div>
             </article>
         </div>
-
+        <br>
         <div class="history-sections hidden" id="hidden-sections-2">
             <article class="leadership">
+                <h2 class="fade-in">Funding and Distribution: Managing the First Print Run</h2>
+                <br>
+                <p class="fade-in">The journal grew in size and importance. Radha Krishnan organized a Bharat Festival
+                    to support the journal and began mentoring Aruna Ramesh to take on the editorship.</p>
+                <br>
                 <h2 class="fade-in">Leadership Transition: Empowering the Next Generation</h2>
                 <br>
-                <p class="fade-in">As Radha Krishnan looked to the future, he recognized the importance of a smooth
-                    leadership transition. He mentored Aruna Ramesh, who took over as the editor, preparing her for the
-                    challenges of running the journal. Even though Aruna had no prior knowledge of journalism, Radha
-                    Krishnan's guidance helped her develop the necessary skills.</p>
-
+                <p class="fade-in">Radha Krishnan mentored Aruna Ramesh, preparing her to lead the journal despite her
+                    lack of prior experience.</p>
+                <br>
                 <div class="image" data-aos="fade-up" data-aos-delay="200">
                     <img loading="lazy" src="old-pics/four.jpg" alt="Radha Krishnan mentoring Aruna Ramesh">
                 </div>
             </article>
-
+            <br>
             <article class="conclusion">
                 <h2 class="fade-in">Conclusion: A Legacy of Student Expression</h2>
                 <br>
-                <p class="fade-in">The journey of Ilandhoothu is a testament to the power of student initiative,
-                    leadership, and expression. What began as a small project in 1987 has grown into a platform that
-                    continues to give students a voice in their academic community, encouraging creativity and fostering
-                    a sense of collaboration.</p>
+                <p class="fade-in">Ilandhoothu stands as a testament to student initiative, leadership, and expression,
+                    providing a platform for student voices and fostering collaboration.
+                    <br>
+                    <b>Ilandhoothu</b> continues to thrive, carrying forward Radha Krishnan’s vision and empowering
+                    students to share their voices.
+                </p>
             </article>
         </div>
 
@@ -311,7 +324,6 @@
         <button class="order-btn" id="show-less-btn" onclick="toggleSections('less')" style="display:none;"
             data-aos="fade-up" data-aos-delay="200">Show
             Less</button>
-
     </section>
 
     <br><br><br>
@@ -323,7 +335,6 @@
         </div>
         <br>
         <div id="old-book">
-
             <p class="ob-contant">
                 We have diligently gathered and curated the complete archive of ILANTHOODHU, preserving its rich legacy
                 from the very first edition to the latest. This collection serves as a testament to its journey,
@@ -331,11 +342,9 @@
                 button below to explore the collection.
             </p>
             <br>
-
             <button id="viewLibraryBtn" class="order-btn">
                 View Library
             </button>
-
             <br>
             <br>
             <div class="sub-heading">
@@ -346,7 +355,6 @@
                 <p class="ed-para">
                     editorial board
                 </p>
-
                 <button class="order-btn" id="order-btn" onclick="openURLtwo()">
                     View Now
                 </button>
@@ -360,7 +368,6 @@
             </script>
             <br>
         </div>
-
     </section>
 
     <!-- Hidden Full-Screen Library Page -->
@@ -368,12 +375,10 @@
 
         <button id="backBtn" class="back-btn">&#8592;</button>
         <br><br><br>
-
         <div class="library-content">
-            <div class="heading" data-aos="fade-up" data-aos-delay="100">
+            <div class="lib-heading" data-aos="fade-up" data-aos-delay="100">
                 <p>library</p>
             </div>
-
             <div class="b-item" data-aos="fade-up" data-aos-delay="200">
                 <!--1999-special book-->
                 <div class="b-wrapper" data-aos="fade-up">
@@ -557,7 +562,7 @@
                     <img loading="lazy" src="book-wrapper/2023 sept.jpg" alt="Book 2">
                     <p>2023 september Book</p>
                     <button class="order-btn">
-                        <a href="books/2023 sept.pdf" target="_blank" aria-label="illanthoodhu G mail">
+                        <a href="books/2023 sept.pdf" target="_blank" aria-label="illanthoodhu">
                             View Now
                         </a>
                     </button>
@@ -576,8 +581,6 @@
             </div>
         </div>
     </div>
-
-
     <br><br><br>
 
     <!-----------section four(video)----------->
@@ -600,7 +603,6 @@
             </div>
         </section>
     </section>
-
     <br><br><br>
 
     <!-----------section five(contact)----------->
@@ -610,13 +612,12 @@
         </div>
         <div class="logos" data-aos="fade-up">
 
-            <a href="https://www.instagram.com/ilanthoodhu_student_magazine?igsh=dmV3Z2FmZ3FjZ2hl" target="_blank" tabindex="0"
-                aria-label="instagram"><svg ViewBox="0 0 448 512" class="SocialHandle">
+            <a href="https://www.instagram.com/ilanthoodhu_student_magazine?igsh=dmV3Z2FmZ3FjZ2hl" target="_blank"
+                tabindex="0" aria-label="instagram"><svg ViewBox="0 0 448 512" class="SocialHandle">
                     <path
                         d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z" />
                 </svg>
             </a>
-
 
             <a href="mailto:illanthoodhu32@gmail.com" target="_blank" aria-label="My G mail"><svg id="GmailLogo"
                     ViewBox="0 0 512 512">
@@ -640,10 +641,8 @@
                         d="M192 0C86 0 0 86 0 192c0 87.3 128 271.5 176.5 340.2 8.5 11.6 26.5 11.6 35 0C256 463.5 384 279.3 384 192 384 86 298 0 192 0zm0 272a80 80 0 1 1 0-160 80 80 0 1 1 0 160z" />
                 </svg>
             </a>
-
         </div>
     </section>
-
     <br><br><br>
 
     <!-----------section six(sponsors)----------->
@@ -668,7 +667,34 @@
 
     <!-----------footer section----------->
     <footer>
-        <p>&copy; 2025 illanthoodhu.com</p>
+        <div class="footer-content">
+            <div class="developer-section">
+                <h3 class="developer-title">Developed by</h3>
+                <br>
+                <p class="thirtysixth-year">36th year members</p>
+                <br>
+                <div class="developers">
+                    <div class="developer">
+                        <img src="images/dev1.jpg" alt="Member 1">
+                        <br>
+                        <p class="name">Nithyadharshini.K</p>
+                        <p class="department">Department of <br>Computer Science</p>
+                        <a href="mailto:nithya4648@gmail.com">nithya4648@gmail.com</a>
+                    </div>
+                    <div class="developer">
+                        <img src="images/dev2.jpg" alt="Member 2">
+                        <br>
+                        <p class="name">Guhalakshman.G</p>
+                        <p class="department">Department of <br>Computer Science</p>
+                        <a href="mailto:guhan3173@gmail.com">guhan3173@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+            <div class="footer2">
+                <p>© 2025 ilanthoodhu.com</p>
+            </div>
+        </div>
     </footer>
 </body>
 
