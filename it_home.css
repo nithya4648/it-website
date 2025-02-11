@@ -74,6 +74,7 @@ noscript {
     margin: auto;
     font-size: 70px;
     font-weight: 600;
+    text-align: center;
     background-clip: text;
     background-image: linear-gradient(45deg, #2c1200, #6d442d, #2c1200);
     color: transparent;
@@ -379,7 +380,7 @@ section {
 
 /*36th year editorial board*/
 .editorial-board {
-    width: 85%;
+    width: 80%;
     margin: auto;
     justify-content: center;
     align-items: center;
