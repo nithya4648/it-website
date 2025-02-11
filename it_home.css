@@ -95,10 +95,10 @@ noscript {
 
 .lib-heading p {
     margin: auto;
-    font-size: 70px;
+    font-size: 65px;
     font-weight: 600;
     background-clip: text;
-    background-image: linear-gradient(45deg, #704b36, #916f56, #704b36);
+    background-image: linear-gradient(45deg, #61402d, #916f56, #61402d);
     color: transparent;
 }
 
@@ -650,7 +650,7 @@ article {
 article h2 {
     font-size: 25px;
     font-weight: 400;
-    color: #2c1200;
+    color: #441c00;
 }
 
 article p {
@@ -686,12 +686,12 @@ article p {
 .founder-image p {
     font-size: 20px;
     font-weight: 300;
-    color: #000000;
+    color: #441c00;
 }
 
 .founder-image p {
     b {
-        color: #2c1200;
+        color:#000000;
     }
 }
 
@@ -747,6 +747,7 @@ article p {
     align-items: center;
     justify-content: flex-start;
     overflow-y: auto;
+    margin-bottom: 10px;
 }
 
 .library-content::-webkit-scrollbar {
@@ -956,6 +957,9 @@ article p {
 footer {
     background-color: #1d0c00;
     text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
 }
 
 .footer-content {
@@ -965,6 +969,9 @@ footer {
 
 .developer-section {
     margin-top: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .thirtysixth-year {
