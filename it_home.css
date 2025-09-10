@@ -34,7 +34,7 @@ body {
 
 /*----------header section(preloader, noscript)style---------*/
 #preloader {
-    background-color: white;
+    background-color: #ffffff;
     height: 100%;
     width: 100%;
     position: fixed;
@@ -269,7 +269,7 @@ section {
     padding: 10px;
     margin-bottom: 20px;
     width: 100%;
-    max-width: 800px;
+    max-width: 732px;
     border: none;
     border-radius: 5px;
     background: #6d442d91;
