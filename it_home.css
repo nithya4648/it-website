@@ -34,7 +34,7 @@ body {
 
 /*----------header section(preloader, noscript)style---------*/
 #preloader {
-    background-color: #ffffff;
+    background-color: #d8ac76;
     height: 100%;
     width: 100%;
     position: fixed;
@@ -43,11 +43,10 @@ body {
     align-items: center;
     justify-content: center;
     overflow-y: hidden;
-    background-image: url(Pulse-0.4s-200px.svg);
+    background-image: url(Spin@1x-1.0s-200px-200px.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 10%;
-    filter: invert(1);
 }
 
 noscript {
