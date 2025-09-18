@@ -30,4 +30,4 @@ JavaScript: For dynamic interactivity and enhanced user engagement.
 
 ## 🌐 Live Preview
 
-Check out the live website here:
+Check out the live website here: https://ilanthoodhu.netlify.app/
